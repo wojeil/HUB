@@ -24,11 +24,11 @@ const AuthExample = () => (
 				<Nav className="App-header" />
 				<Container>
 					<Switch>
-						<Route path="/public" component={PublicRoute} />
-						<Route path="/login" component={Login} />
-						<Route path="/register" component={Register} />
-						<PrivateRoute path="/protected" component={ProtectedRoute} />
-						<AdminRoute path ="/admin-dash" component={NewPage} />
+						<Route exact path="/" component={PublicRoute} />
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/register" component={Register} />
+						<PrivateRoute exact path="/protected" component={ProtectedRoute} />
+						<AdminRoute exact path ="/admin-dash" component={NewPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>
 				</Container>
