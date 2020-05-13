@@ -12,7 +12,8 @@ import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import NewPage from "./pages/NewPage";
+import NewPage from "./pages/Admin Dashboard";
+import Calendar from "./pages/Calender";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 
@@ -28,6 +29,7 @@ const AuthExample = () => (
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/register" component={Register} />
 						<PrivateRoute exact path="/protected" component={ProtectedRoute} />
+						<PrivateRoute exact path="/calendar" component={Calendar} />
 						<AdminRoute exact path ="/admin-dash" component={NewPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>
