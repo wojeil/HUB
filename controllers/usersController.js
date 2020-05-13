@@ -10,10 +10,11 @@ module.exports = {
 			Account.findOne({ username: user })
 				.then(userData => {
 					console.log(userData);
-					const { _id, username } = userData;
+					const { _id, username, role } = userData;
 					return res.status(200).json({
 						id: _id,
 						username,
+						role,
 						authenticated: true
 					})
 				})
