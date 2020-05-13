@@ -1,7 +1,7 @@
 // create roles for user
-const ROLES = {
+const Roles = {
     Admin: 'Admin',
-    Customer: 'Customer'
+    User: 'User'
   }
   
- export default { ROLES };
+ export default  Roles;
