@@ -9,7 +9,8 @@ function RegisterForm({ onRegister }) {
 	const passwordRef = useRef();
 
 	return (
-		<Card title="Register a New User">
+		
+		<Card title="Register New User">
 			<form
 				ref={formRef}
 				onSubmit={(e) => {
@@ -27,6 +28,9 @@ function RegisterForm({ onRegister }) {
 				</div>
 			</form>
 		</Card>
+
+
+		
 	)
 }
 
