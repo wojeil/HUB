@@ -16,7 +16,8 @@ function RegisterForm({ onRegister }) {
 					e.preventDefault();
 					return onRegister({
 						username: userNameRef.current.value,
-						password: passwordRef.current.value
+						password: passwordRef.current.value,
+						role: "Admin"
 					});
 				}}
 			>
