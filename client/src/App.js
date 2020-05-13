@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import { Container } from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import NewPage from "./pages/NewPage";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 
@@ -23,11 +24,11 @@ const AuthExample = () => (
 				<Nav className="App-header" />
 				<Container>
 					<Switch>
-						<Route exact path="/" component={PublicRoute} />
-						<Route exaxt path="/login" component={Login} />
-						<Route exact path="/register" component={Register} />
-						<PrivateRoute path="/protected-admin" component={ProtectedRoute} />
-						<PrivateRoute path="/protected-user" component={ProtectedRoute} />
+						<Route path="/public" component={PublicRoute} />
+						<Route path="/login" component={Login} />
+						<Route path="/register" component={Register} />
+						<PrivateRoute path="/protected" component={ProtectedRoute} />
+						<AdminRoute path ="/admin-dash" component={NewPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>
 				</Container>
@@ -64,6 +65,25 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 								pathname: '/login',
 								state: { from: props.location }
 							}} />
+						</div>
+					)
+			)} />
+		</div>
+	</Router>
+)
+const AdminRoute = ({ component: Component, ...rest }) => (
+	<Router>
+		<div>
+
+			<Route {...rest} render={props => (
+				
+				Auth.isAuthenticated && Auth.isAdmin ? (
+					<Component {...props} />
+				) : (
+						<div className="container">
+							<div className="alert alert-danger text-center" role="alert">
+								This page is private to admins.
+					</div>
 						</div>
 					)
 			)} />

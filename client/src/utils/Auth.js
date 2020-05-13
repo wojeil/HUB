@@ -2,9 +2,10 @@
 /**
  * I decide to move everything out here to clean up the environment
  */
-
+// import { UserContext } from "../../utils/UserContext";
 const Auth = {
 	isAuthenticated: false,
+	isAdmin:false,
 	authenticate(cb) {
 		// req.user on backend will contain user info if
 		// this person has credentials that are valid
@@ -13,16 +14,25 @@ const Auth = {
 		})
 			.then((res) => {
 				console.log(`response to authenticate ${res}`);
-
-				//added this for the response code check on deployment
 				if (res.status !== 200) {
 					return false;
 				}
-				this.isAuthenticated = true
-				if (typeof cb === 'function') {
-					console.log(`User in Auth.js ${res.user}`);
-					cb(res.json().user);
+				return res.json(res)
+			}).then(data =>{
+				//added this for the response code check on deployment
+				console.log("test", data)
+				
+				if(data.role === "Admin"){
+					 this.isAdmin = true;
 				}
+				
+				this.isAuthenticated = true
+				console.log(this.isAdmin)
+				if (typeof cb === 'function') {
+					console.log(`User in Auth.js ${data}`);
+					cb(data);
+				}
+				
 			})
 			.catch((err) => {
 				console.log('Error fetching authorized user.');
