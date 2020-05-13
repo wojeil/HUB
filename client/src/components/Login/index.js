@@ -11,7 +11,7 @@ function Login() {
 
 	useEffect(() => {
 
-		const { from } = location.state || { from: { pathname: '/protected' } }
+		const { from } = location.state || { from: { pathname: '/protected-admin' } }
 		if (redirectToReferrer) {
 			history.push(from)
 		}
