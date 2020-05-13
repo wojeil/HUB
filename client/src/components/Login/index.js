@@ -10,10 +10,16 @@ function Login() {
 	const [redirectToReferrer, setRedirectToReferrer] = useState(false);
 
 	useEffect(() => {
-
-		const { from } = location.state || { from: { pathname: '/protected' } }
+		let from;
+		console.log(location)
+		if (!Auth.isAdmin) {
+			from = location.state || { from: { pathname: '/protected' } }
+		} else {
+			from = location.state || { from: { pathname: '/admin-dash' } }
+		}
+		console.log(from)
 		if (redirectToReferrer) {
-			history.push(from)
+			history.push(from.from.pathname)
 		}
 
 	}, [redirectToReferrer, history, location.state])
