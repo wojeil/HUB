@@ -10,7 +10,7 @@ function RegisterForm({ onRegister }) {
 
 	return (
 		
-		<Card title="Register as Manager">
+		<Card title="Register New User">
 			<form
 				ref={formRef}
 				onSubmit={(e) => {
