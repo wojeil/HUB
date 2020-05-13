@@ -7,22 +7,30 @@ function RegisterForm({ onRegister }) {
 	const formRef = useRef();
 	const userNameRef = useRef();
 	const passwordRef = useRef();
+	const permissionsRef= useRef();
 
 	return (
 		<Card title="Register a New User">
 			<form
 				ref={formRef}
+				permissions={permissionsRef}
 				onSubmit={(e) => {
 					e.preventDefault();
 					return onRegister({
 						username: userNameRef.current.value,
-						password: passwordRef.current.value
+						password: passwordRef.current.value,
+						admin: permissionsRef.current.value
 					});
 				}}
 			>
 				<div className="form-group">
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
+					<select className="custom-select" ref={permissionsRef}>
+						<option selected>Choose your Role...</option>
+						<option value={true} >Admin</option>
+						<option value={false} >User</option>
+					</select><br/>
 					<button className="btn btn btn-primary" type='submit'>Submit</button>
 				</div>
 			</form>
