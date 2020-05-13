@@ -1,3 +1,6 @@
+/* body {
+ 
+} */
 .App {
   text-align: center;
 }
@@ -8,10 +11,11 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-image: url("https://media.freestocktextures.com/cache/5b/48/5b484d445dac474cb4d36b028a1c6029.jpg");
   height: 150px;
   padding: 20px;
   color: white;
+  
 }
 
 

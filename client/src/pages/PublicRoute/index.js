@@ -6,19 +6,25 @@ import React from 'react'
 function PublicRoute() {
 
     return (
-        <div className="container">
+        <>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <h1 class="display-4">Welcome to The HUB</h1>
+                <p class="lead">A Home that keeps you connected.</p>
+            </div>
+        </div>
+        <div className="container-fluid">
             <div className="row">
                 <div className="col-sm">
-                </div>
-                <div className="col-sm">
-                    <h3>Example Public Route</h3>
-                    <h6>Anyone can see this content</h6>
+
                 </div>
                 <div className="col-sm">
 
                 </div>
+
             </div>
         </div>
+        </>
     )
 }
 
