@@ -1,22 +1,13 @@
 import React from 'react'
-import Announcements from "../../components/Announcement/index";
-import FormButton from "../../components/FormSubmitButton/index";
+import DashBoard from "../../components/DashBoard";
+import FormButton from "../../components/FormSubmitButton";
 
 function newPage() {
 
     return (
 
         <div className="container-fluid">
-            <div className="container" id="dashBoard">
-                <div className="card" id="shortTerm">
-                    <Announcements title="" term="" body="" />
-
-                </div>
-                <div className="card" id="longTerm">
-                    <Announcements title="" term="" body="" />
-
-                </div>
-            </div>
+            <DashBoard/>
             <hr />
             <form>
                 <div className="form-group">
