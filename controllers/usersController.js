@@ -3,8 +3,8 @@ const passport = require('passport');
 
 module.exports = {
 	getUser: function (req, res) {
-
 		const { user } = req.session.passport
+
 
 		if (user) {
 			Account.findOne({ username: user })
