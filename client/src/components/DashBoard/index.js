@@ -22,12 +22,20 @@ function DashBoard (){
     return(
         <div className="container" id="dashBoard">
         <div id="shortTerm">
-            <Announcements title="" term="" body="" />
+            {announcements.map(announcement => {
+                return(
+                    <Announcements key={announcement._id} title={announcement.title} type={announcement.type} body={announcement.body} />      
+                )
+            })}
+            
 
         </div>
         <div id="longTerm">
-            <Announcements title="" term="" body="" />
-
+        {announcements.map(announcement => {
+                return(
+                    <Announcements key={announcement._id} title={announcement.title} type={announcement.type} body={announcement.body} />      
+                )
+            })}
         </div>
     </div>
     );
