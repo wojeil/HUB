@@ -9,9 +9,8 @@ const Dashboard = new Schema({
             content: String
         }
     ],
-    owner: {
-        type:Schema.Types.ObjectId , ref: 'accounts'
-    },
+    owner: Schema.Types.ObjectId,
+    
     lastUpdated: Date
 });
 
