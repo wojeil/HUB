@@ -3,9 +3,9 @@ import axios from "axios";
 export default {
   // Gets all Announcements
   getAnnouncements: function() {
-    return axios.get("/api/dashboard");
+    return axios.get("/api/dash/get");
   },
-  // Post all Announcements
+  // Post new Announcements
   addAnnouncement: function(){
       return axios.post("/api/dashboard");
   },
