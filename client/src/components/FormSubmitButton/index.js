@@ -2,7 +2,10 @@ import React from "react";
 
 function FormButton (){
     return(
-        <button type="submit">Submit</button>
+        <button type="submit" 
+        onClick={() =>{
+
+        }}>Submit</button>
     )
 }
 
