@@ -30,8 +30,16 @@ class CalendarTwo extends React.Component {
       renderDays() {}
       renderCells() {}
       onDateClick = day => {};
-      nextMonth = () => {};
-      prevMonth = () => {};
+      nextMonth = () => {
+        this.setState({
+          currentMonth: dateFns.addMonths(this.state.currentMonth, 1)
+        });
+      };
+      prevMonth = () => {
+        this.setState({
+          currentMonth: dateFns.subMonths(this.state.currentMonth, 1)
+        });
+      };
   render() {
     return (
       <div className="calender">
