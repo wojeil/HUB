@@ -17,6 +17,7 @@ module.exports = {
         
     },
 
+    // Create new Dashboard
     postDash: function (req, res) {
         const { user } = req.session.passport
         Dashboard.create({owner:user, lastUpdated: Date.now()}, (err, data) =>{

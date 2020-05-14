@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Dashboard = require("../models/dashboard");
 
-// This file empties the Books collection and inserts the books below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
