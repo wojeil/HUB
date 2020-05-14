@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Dashboard = new Schema({
-    items:[
+    items: [
         {
-           title: String,
-           type: String,
-            content: String
+            title: String,
+            type: String,
+            body: String
         }
     ],
     owner: String,

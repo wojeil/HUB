@@ -4,4 +4,7 @@ const dashController = require("../../controllers/dashController");
 
 router.route("/get")
   .get(dashController.getDash);
+
+router.route("/post")
+  .post(dashController.postDash)
 module.exports = router;
