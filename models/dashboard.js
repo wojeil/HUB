@@ -9,8 +9,8 @@ const Dashboard = new Schema({
             content: String
         }
     ],
-    owner: Schema.Types.ObjectId,
-    
+    owner: String,
+
     lastUpdated: Date
 });
 
