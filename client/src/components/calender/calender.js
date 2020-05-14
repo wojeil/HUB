@@ -1,5 +1,17 @@
 import React from "react";
-import dateFns from "date-fns";
+import addMonths from 'date-fns/addMonths';
+import subMonths from 'date-fns/subMonths';
+import addDays from 'date-fns/addDays';
+import startOfWeek from 'date-fns/startOfWeek';
+import endOfWeek from 'date-fns/endOfWeek';
+import startOfMonth from 'date-fns/startOfMonth';
+import endOfMonth from 'date-fns/endOfMonth';
+import isSameMonth from 'date-fns/isSameMonth';
+import isSameDay from 'date-fns/isSameDay';
+import format from 'date-fns/format'
+//import parse from 'date-fns/parse'
+import toDate from 'date-fns/toDate'
+
 
 class CalendarTwo extends React.Component {
     state = {
@@ -8,7 +20,7 @@ class CalendarTwo extends React.Component {
     };
 
     renderHeader() {
-        const dateFormat = "MMMM YYYY";
+        const dateFormat = "MMMM yyyy";
         return (
             <div className="header row flex-middle">
                 <div className="col col-start">
@@ -18,7 +30,7 @@ class CalendarTwo extends React.Component {
                 </div>
                 <div className="col col-center">
                     <span>
-                        {dateFns.format(this.state.currentMonth, dateFormat)}
+                        {format(this.state.currentMonth, dateFormat)}
                     </span>
                 </div>
                 <div className="col col-end" onClick={this.nextMonth}>
@@ -29,12 +41,12 @@ class CalendarTwo extends React.Component {
     }
     renderDays() {
         const dateFormat = "dddd";
-        const days = [];
-        let startDate = dateFns.startOfWeek(this.state.currentMonth);
-        for (let i = 0; i < 7; i++) {
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let startDate = startOfWeek(this.state.currentMonth);
+        for (let i = 0; days.length < 7; i++) {
             days.push(
                 <div className="col col-center" key={i}>
-                    {dateFns.format(dateFns.addDays(startDate, i), dateFormat)}
+                    {format(addDays(startDate, i), dateFormat)}
                 </div>
             );
         }
@@ -42,34 +54,34 @@ class CalendarTwo extends React.Component {
     }
     renderCells() {
         const { currentMonth, selectedDate } = this.state;
-        const monthStart = dateFns.startOfMonth(currentMonth);
-        const monthEnd = dateFns.endOfMonth(monthStart);
-        const startDate = dateFns.startOfWeek(monthStart);
-        const endDate = dateFns.endOfWeek(monthEnd);
-        const dateFormat = "D";
+        const monthStart = startOfMonth(currentMonth);
+        const monthEnd = endOfMonth(monthStart);
+        const startDate = startOfWeek(monthStart);
+        const endDate = endOfWeek(monthEnd);
+        const dateFormat = "d";
         const rows = [];
         let days = [];
         let day = startDate;
         let formattedDate = "";
         while (day <= endDate) {
             for (let i = 0; i < 7; i++) {
-                formattedDate = dateFns.format(day, dateFormat);
+                formattedDate = format(day, dateFormat);
                 const cloneDay = day;
                 days.push(
                     <div
                         className={`col cell ${
-                            !dateFns.isSameMonth(day, monthStart)
+                            !isSameMonth(day, monthStart)
                                 ? "disabled"
-                                : dateFns.isSameDay(day, selectedDate) ? "selected" : ""
+                                : isSameDay(day, selectedDate) ? "selected" : ""
                             }`}
                         key={day}
-                        onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
+                        onClick={() => this.onDateClick(toDate(cloneDay))}
                     >
                         <span className="number">{formattedDate}</span>
-                        <span className="bg">{formattedDate}</span>
+                        
                     </div>
                 );
-                day = dateFns.addDays(day, 1);
+                day = addDays(day, 1);
             }
             rows.push(
                 <div className="row" key={day}>
@@ -87,12 +99,12 @@ class CalendarTwo extends React.Component {
       };
     nextMonth = () => {
         this.setState({
-            currentMonth: dateFns.addMonths(this.state.currentMonth, 1)
+            currentMonth: addMonths(this.state.currentMonth, 1)
         });
     };
     prevMonth = () => {
         this.setState({
-            currentMonth: dateFns.subMonths(this.state.currentMonth, 1)
+            currentMonth: subMonths(this.state.currentMonth, 1)
         });
     };
     render() {
