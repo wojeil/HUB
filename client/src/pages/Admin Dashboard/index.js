@@ -1,5 +1,6 @@
 import React from 'react'
 import Announcements from "../../components/Announcement/index";
+import FormButton from "../../components/FormSubmitButton/index";
 
 function newPage() {
 
@@ -7,10 +8,10 @@ function newPage() {
       
             <div className="container-fluid">
                 <div className="card" id="dashBoard">
-                    <Announcements title="" term="" body=""></Announcements>
+                    <Announcements title="" term="" body=""/>
                     
                 </div>
-
+                <hr/>
                 <form>
                     <div className="form-group">
                         <label for="exampleFormControlInput1">Title</label>
@@ -27,6 +28,7 @@ function newPage() {
                         <label for="exampleFormControlTextarea1">Example textarea</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                    <FormButton/>
                 </form>
             </div>
       
