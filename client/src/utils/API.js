@@ -11,11 +11,11 @@ export default {
   },
   // Deletes the Announcements with the given id
   deleteAnnouncement: function() {
-    return axios.delete("/api/dashboard/" + id);
+    return axios.delete("/api/dashboard/");
   },
   // Update an Announcement with given id
   updateAnnouncement: function() {
-    return axios.put("/api/dashboard/" +id);
+    return axios.put("/api/dashboard/");
   }
 };
 
