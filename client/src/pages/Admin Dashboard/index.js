@@ -1,13 +1,15 @@
 import React from 'react'
+import Announcements from "../../components/Announcement/index";
 
 function newPage() {
 
     return (
-        <>
+      
             <div className="container-fluid">
-                <div className="alert alert-success" role="alert">
-                    Success, You are admin
-            </div>
+                <div className="card" id="dashBoard">
+                    <Announcements title="" term="" body=""></Announcements>
+                    
+                </div>
 
                 <form>
                     <div className="form-group">
@@ -27,7 +29,7 @@ function newPage() {
                     </div>
                 </form>
             </div>
-        </>
+      
     )
 
 }
