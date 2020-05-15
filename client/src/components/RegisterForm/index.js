@@ -9,6 +9,7 @@ function RegisterForm({ onRegister }) {
 	const userNameRef = useRef();
 	const passwordRef = useRef();
 	const permissionsRef = useRef();
+	const managerRef = useRef();
 
 	return (
 		
@@ -21,13 +22,15 @@ function RegisterForm({ onRegister }) {
 					return onRegister({
 						username: userNameRef.current.value,
 						password: passwordRef.current.value,
-						role: permissionsRef.current.value
+						role: permissionsRef.current.value,
+						manager: managerRef.current.value
 					});
 				}}
 			>
 				<div className="form-group">
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
+					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your Manager's Username" /><br />
 					<select className="custom-select" ref={permissionsRef}>
 						<option  defaultValue >{Roles.User}</option>
 						<option>{Roles.Admin}</option>
