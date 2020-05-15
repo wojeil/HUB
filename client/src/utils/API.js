@@ -7,7 +7,7 @@ export default {
   },
   // Post new Announcements
   addAnnouncement: function(){
-      return axios.post("/api/dashboard");
+      return axios.post("/api/dash/post");
   },
   // Deletes the Announcements with the given id
   deleteAnnouncement: function() {
