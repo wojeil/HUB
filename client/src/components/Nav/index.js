@@ -47,16 +47,24 @@ function Nav() {
         {user.username ? <span className="userText text-white ml-3 pt-1" to="#">Hi {user.username} !</span> : ""}
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ">
-            <Link style={buttonStyle} className= "btn btn-danger" to= "/protected">User DashBoard</Link>  
-            <Link style={buttonStyle} className="btn btn-danger" to="/calendar"> Planner</Link>
-            <Link style={buttonStyle} className="btn btn-danger" to="/admin-dash"> DashBoard</Link>
-            
+            {!user.username ? "" :
+              <Link style={buttonStyle} className="btn btn-danger" to="/protected">User DashBoard</Link>
+            }
+            {!user.username ? "" :
+              <Link style={buttonStyle} className="btn btn-danger" to="/calendar"> Planner</Link>
+            }
+            {user.role ==="Admin" ? <Link style={buttonStyle} className="btn btn-danger" to="/admin-dash"> DashBoard</Link> :""
+              
+            }
+
             {user.username ? "" :
               <Link style={buttonStyle} className="btn btn-warning" to="/register">Register a New User</Link>
             }
             <AuthButton />
           </li>
 
+
+          
         </ul>
       </div>
     </nav>
