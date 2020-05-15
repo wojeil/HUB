@@ -10,7 +10,10 @@ function newPage() {
 	const bodyRef = useRef();
 
 function addAnnouncements(){
-    API.addAnnouncement();
+    API.addAnnouncement().then( res =>
+        console.log (res.data)
+    ).catch(err =>console.log(err));
+        
 }
 
     return (
