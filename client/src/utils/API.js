@@ -14,8 +14,9 @@ export default {
     return axios.delete("/api/dashboard/");
   },
   // Update an Announcement with given id
-  updateAnnouncement: function() {
-    return axios.put("/api/dashboard/");
+  updateAnnouncement: function(data) {
+    return axios.post("/api/dash/add", data)
+    .then(res => console.log(res)).catch(err => console.log(err))
   }
 };
 

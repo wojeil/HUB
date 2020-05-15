@@ -12,8 +12,10 @@ function DashBoard (){
     },[])
     
     function loadAnnouncements (){
+        
         API.getAnnouncements()
         .then(res =>{
+            console.log(res)
             setAnnouncements(res.data.items)
             console.log("userdash" , res.data)
         }
