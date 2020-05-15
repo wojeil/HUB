@@ -1,6 +1,7 @@
 import React from 'react'
 import API from "../../utils/API"
 import Auth from "../../utils/Auth"
+import "./style.css"
 
 
 function Announcements({title,body,type,loadAnnouncements}) {
@@ -16,7 +17,7 @@ function Announcements({title,body,type,loadAnnouncements}) {
     }
 
     return (
-        <div className="card">
+        <div className="card" id="announcement">
             <div className="card-body"
           >
                 <h3 className="card-title">{title}</h3>
