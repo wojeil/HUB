@@ -8,20 +8,19 @@ module.exports = {
         const { user } = req.session.passport
 
         Account.findOne({ username: user }).then(userData => {
-            console.log(userData);
+            // console.log("testData" ,userData);
             Dashboard.findOne({ owner: userData.manager })
                 .then(dashData => {
-                    console.log(dashData)
+                    // console.log(dashData)
                     res.status(200).json(dashData)
                 })
         })
-
     },
-
     // Create new Dashboard
     postDash: function (req, res) {
-        const { user } = req.session.passport
-        Dashboard.create({ owner: user, lastUpdated: Date.now() }, (err, data) => {
+        // const { user } = req.session.passport
+        console.log("user to create dash for", req.body)
+        Dashboard.create({ owner: req.body.username, lastUpdated: Date.now() }, (err) => {
             if (err) throw err;
             res.status(200);
         })
