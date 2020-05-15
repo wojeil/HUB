@@ -50,7 +50,29 @@ class CalendarTwo extends React.Component {
                 </div>
             );
         }
-        return <div className="days row">{days}</div>;
+        return <div className="days row">
+            <div className= 'col cell'>
+                {days[0]}
+            </div>
+            <div className= 'col cell'>
+                {days[1]}
+            </div>
+            <div className= 'col cell'>
+                {days[2]}
+            </div>
+            <div className= 'col cell'>
+                {days[3]}
+            </div>
+            <div className= 'col cell'>
+                {days[4]}
+            </div>
+            <div className= 'col cell'>
+                {days[5]}
+            </div>
+            <div className= 'col cell'>
+                {days[6]}
+            </div>
+            </div>;
     }
     renderCells() {
         const { currentMonth, selectedDate } = this.state;
