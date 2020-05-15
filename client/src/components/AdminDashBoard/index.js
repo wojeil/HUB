@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Announcements from "../Announcement"
 import API from "../../utils/API"
 import AdminDashBoardForm from "../AdminDashBoardForm"
-
+import{Row,Col} from "../Grid"
 function AdminDashBoard (){
 
     const [announcements, setAnnouncements] = useState([])
@@ -26,6 +26,8 @@ function AdminDashBoard (){
 
     return(
         <div className="container" id="dashBoard">
+            <Row>
+                <Col size="sm-6">
         <div id="shortTerm">{announcements.length === 0 ? "" : announcements.map((announcement,i )=> {
                 return(
                     
@@ -36,13 +38,17 @@ function AdminDashBoard (){
             
 
         </div>
-        <div id="longTerm">
-        {/* {announcements.map(announcement => {
+        </Col>
+        <Col size="sm-6">
+        <div  id="longTerm">
+        {announcements.map(announcement => {
                 return(
                     <Announcements key={announcement._id} title={announcement.title} type={announcement.type} body={announcement.body} />      
                 )
-            })} */}
+            })}
         </div>
+        </Col>
+        </Row>
 
         <AdminDashBoardForm loadAnnouncements={loadAnnouncements}/>
     </div>
