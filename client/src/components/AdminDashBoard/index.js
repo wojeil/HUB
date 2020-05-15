@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Announcements from "../Announcement"
 import API from "../../utils/API"
+import AdminDashBoardForm from "../AdminDashBoardForm"
 
-function DashBoard (){
+function AdminDashBoard (){
 
     const [announcements, setAnnouncements] = useState([])
 
@@ -42,8 +43,10 @@ function DashBoard (){
                 )
             })} */}
         </div>
+
+        <AdminDashBoardForm loadAnnouncements={loadAnnouncements}/>
     </div>
     );
 }
 
-export default DashBoard
+export default AdminDashBoard

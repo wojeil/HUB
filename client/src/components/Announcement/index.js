@@ -1,5 +1,6 @@
 import React from 'react'
 import API from "../../utils/API"
+import Auth from "../../utils/Auth"
 
 
 function Announcements({title,body,type,loadAnnouncements}) {
@@ -21,7 +22,8 @@ function Announcements({title,body,type,loadAnnouncements}) {
                 <h3 className="card-title">{title}</h3>
                 <h5>{type}</h5>
                 <p className="card-text">{body}</p>
-                <button onClick={handleSubmit} type= "submit" className="btn float-right">Delete</button>
+                {Auth.isAdmin ? <button onClick={handleSubmit} type= "submit" className="btn float-right">Delete</button> : ""}
+            
             </div>
         </div>
     )
