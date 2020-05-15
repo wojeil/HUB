@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Announcements from "../Announcement"
 import API from "../../utils/API"
 
@@ -13,29 +13,31 @@ function DashBoard (){
     
     function loadAnnouncements (){
         API.getAnnouncements()
-        .then(res =>
-            setAnnouncements(res.data)
+        .then(res =>{
+            setAnnouncements(res.data.items)
+            console.log("userdash" , res.data)
+        }
             )
             .catch(err => console.log(err));
     };
 
     return(
         <div className="container" id="dashBoard">
-        <div id="shortTerm">
-            {announcements.map(announcement => {
+        <div id="shortTerm">{announcements.length === 0 ? "" : announcements.map((announcement,i )=> {
                 return(
-                    <Announcements key={announcement._id} title={announcement.title} type={announcement.type} body={announcement.body} />      
+                    <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} />      
                 )
             })}
+            
             
 
         </div>
         <div id="longTerm">
-        {announcements.map(announcement => {
+        {/* {announcements.map(announcement => {
                 return(
                     <Announcements key={announcement._id} title={announcement.title} type={announcement.type} body={announcement.body} />      
                 )
-            })}
+            })} */}
         </div>
     </div>
     );

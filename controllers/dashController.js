@@ -6,11 +6,12 @@ module.exports = {
     // Get the dash for current user
     getDash: function (req, res) {
         const { user } = req.session.passport
-
+        
         Account.findOne({username:user}).then(userData => {
-            console.log("test");
+            console.log(userData);
             Dashboard.findOne({ owner: userData.manager })
             .then(dashData => {
+                console.log(dashData)
                 res.json(dashData)
             })
         })
