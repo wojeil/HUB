@@ -17,16 +17,14 @@ const Auth = {
 				if (res.status !== 200) {
 					return false;
 				}
+				this.isAuthenticated = true
 				return res.json(res)
 			}).then(data =>{
 				//added this for the response code check on deployment
-				console.log("test", data)
 				
 				if(data.role === "Admin"){
 					 this.isAdmin = true;
 				}
-				
-				this.isAuthenticated = true
 				console.log(this.isAdmin)
 				if (typeof cb === 'function') {
 					console.log(`User in Auth.js ${data}`);
@@ -45,6 +43,7 @@ const Auth = {
 		})
 			.then((res) => {
 				this.isAuthenticated = false;
+				this.isAdmin = false;
 				if (typeof cb === 'function') {
 					// user was logged out
 					cb(true);
