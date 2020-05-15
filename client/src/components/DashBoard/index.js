@@ -27,7 +27,8 @@ function DashBoard (){
         <div className="container" id="dashBoard">
         <div id="shortTerm">{announcements.length === 0 ? "" : announcements.map((announcement,i )=> {
                 return(
-                    <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} />      
+                    
+                    <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} loadAnnouncements={loadAnnouncements} />      
                 )
             })}
             

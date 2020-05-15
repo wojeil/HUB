@@ -10,13 +10,14 @@ export default {
       return axios.post("/api/dash/post");
   },
   // Deletes the Announcements with the given id
-  deleteAnnouncement: function() {
-    return axios.delete("/api/dashboard/");
+  deleteAnnouncement: function(data) {
+    return axios.post("/api/dash/remove",data)
+    .then(res=> console.log(res)).catch(err =>console.log(err));
   },
   // Update an Announcement with given id
   updateAnnouncement: function(data) {
     return axios.post("/api/dash/add", data)
-    .then(res => console.log(res)).catch(err => console.log(err))
+    .then(res => console.log(res)).catch(err => console.log(err));
   }
 };
 
