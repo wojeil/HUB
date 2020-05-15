@@ -9,7 +9,7 @@ module.exports = {
 
         Account.findOne({ username: user }).then(userData => {
             console.log(userData);
-            Dashboard.findOne({ owner: "admin" })
+            Dashboard.findOne({ owner: userData.manager })
                 .then(dashData => {
                     console.log(dashData)
                     res.status(200).json(dashData)
@@ -40,7 +40,7 @@ module.exports = {
     removeDash: function (req, res) {
         const { user } = req.session.passport
         Account.findOne({ username: user }).then(userData => {
-            Dashboard.findOneAndUpdate({ owner: "admin" }, { lastUpdated: Date.now(), $pull: { "items":{title:req.body.title }  } }, (err, data) => {
+            Dashboard.findOneAndUpdate({ owner: user }, { lastUpdated: Date.now(), $pull: { "items":{title:req.body.title }  } }, (err, data) => {
                 if (err) throw err;
                 res.status(200);
             })
