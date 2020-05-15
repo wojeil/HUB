@@ -1,7 +1,9 @@
 import React, {useRef} from "react";
 import API from "../../utils/API"
 import FormButton from "../FormSubmitButton"
-function AdminDashBoardForm() {
+
+
+function AdminDashBoardForm({loadAnnouncements}) {
 
 
     const dashFormRef = useRef();
@@ -16,6 +18,7 @@ function AdminDashBoardForm() {
             type: typeRef.current.value,
             body: bodyRef.current.value
         })
+        loadAnnouncements();
     }
    
     

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Announcements from "../Announcement"
 import API from "../../utils/API"
+import AdminDashBoardForm from "../AdminDashBoardForm"
 
-function DashBoard (){
+function AdminDashBoard (){
 
     const [announcements, setAnnouncements] = useState([])
 
@@ -27,7 +28,8 @@ function DashBoard (){
         <div className="container" id="dashBoard">
         <div id="shortTerm">{announcements.length === 0 ? "" : announcements.map((announcement,i )=> {
                 return(
-                    <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} />      
+                    
+                    <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} loadAnnouncements={loadAnnouncements} />      
                 )
             })}
             
@@ -41,8 +43,10 @@ function DashBoard (){
                 )
             })} */}
         </div>
+
+        <AdminDashBoardForm loadAnnouncements={loadAnnouncements}/>
     </div>
     );
 }
 
-export default DashBoard
+export default AdminDashBoard
