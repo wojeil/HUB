@@ -9,7 +9,7 @@ class Calendar extends React.Component{
               <div id="logo">
                 <span className="icon">date_range</span>
                 <span>
-                  HUB<b>calendar</b>
+                  HUB<b>planner</b>
                 </span>
               </div>
             </header>

@@ -30,15 +30,16 @@ function RegisterForm({ onRegister }) {
 				<div className="form-group">
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
-					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's username or current username if admin" />
+					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's username or current username if admin" /><br/>
 					
 					
 					<select className="custom-select" ref={permissionsRef}>
 						<option  defaultValue >{Roles.User}</option>
 						<option>{Roles.Admin}</option>
 					</select>
-					<button className="btn btn btn-primary" type='submit'>Submit</button>
+					
 				</div>
+				<button className="btn btn btn-primary" type='submit'>Submit</button>
 			</form>
 		</Card>
 
