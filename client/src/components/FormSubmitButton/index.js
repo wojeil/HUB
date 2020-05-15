@@ -2,7 +2,7 @@ import React from "react";
 
 function FormButton (){
     return(
-        <button type="submit" >Submit</button>
+        <button className="btn" type="submit" >Submit</button>
     )
 }
 
