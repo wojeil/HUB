@@ -1,14 +1,24 @@
 import React from 'react'
-
-function Calendar(){
-
-return (
-    <div className="container">
-        <div className="alert alert-success" role="alert">
-            Calendar page 
-            </div>
-    </div>
-)
+import CalendarTwo from '../../components/calender/calender.js'
+import './calendar.css'
+class Calendar extends React.Component{
+        render() {
+        return (
+          <div className="App">
+            <header>
+              <div id="logo">
+                <span className="icon">date_range</span>
+                <span>
+                  HUB<b>calendar</b>
+                </span>
+              </div>
+            </header>
+            <main>
+              <CalendarTwo />
+            </main>
+          </div>
+        );
+      }
 
 }
 
