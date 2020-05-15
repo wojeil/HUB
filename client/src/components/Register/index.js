@@ -9,6 +9,21 @@ function Register() {
 	let history = useHistory();
 
 	const register = (data) => {
+		//create a new dash document if the user is an admin
+		if(data.role === "Admin"){
+			fetch("api/dash/post", {
+				method: "POST",
+				body: JSON.stringify(data),
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				credentials: 'include'
+			}).then(res => {
+				if(res.status === 200){
+					console.log(`New Dash Created For ${data.username}`)
+				}
+			})
+		}
 		fetch('api/users/register', {
 			method: 'POST',
 			body: JSON.stringify(data),
