@@ -18,7 +18,7 @@ function RegisterForm({ onRegister }) {
 				ref={formRef}
 				onSubmit={(e) => {
 					e.preventDefault();
-					console.log(permissionsRef.current)
+					console.log(permissionsRef.current.value)
 					return onRegister({
 						username: userNameRef.current.value,
 						password: passwordRef.current.value,
@@ -30,7 +30,9 @@ function RegisterForm({ onRegister }) {
 				<div className="form-group">
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
-					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your Manager's Username" /><br />
+					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's username or current username if admin" />
+					
+					
 					<select className="custom-select" ref={permissionsRef}>
 						<option  defaultValue >{Roles.User}</option>
 						<option>{Roles.Admin}</option>
