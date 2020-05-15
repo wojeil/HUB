@@ -56,7 +56,7 @@ function AdminDashBoard() {
                     <div id="longTerm">
                         {announcements.length=== 0 ? "" : filterLongAn.map((announcement,i) => {
                             return (
-                                <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} />
+                                <Announcements key={i} title={announcement.title} type={announcement.type} body={announcement.body} loadAnnouncements={loadAnnouncements} />
                             )
                         })}
                     </div>
