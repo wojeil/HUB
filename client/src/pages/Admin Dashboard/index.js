@@ -1,14 +1,20 @@
-import React from 'react'
+import React from 'react';
+import DashBoard from "../../components/DashBoard";
+import AdminDashBoardForm from "../../components/AdminDashBoardForm"
 
-function newPage(){
 
-return (
-    <div className="container">
-        <div className="alert alert-success" role="alert">
-            Success, You are admin
-            </div>
-    </div>
-)
+function newPage() {
+   
+    return (
+
+
+        <div className="container-fluid">
+            <DashBoard />
+            <hr />
+            <AdminDashBoardForm/>
+        </div>
+
+    )
 
 }
 

@@ -4,6 +4,7 @@
  */
 // import { UserContext } from "../../utils/UserContext";
 const Auth = {
+
     isAuthenticated: false,
     isAdmin:false,
     authenticate(cb) {
@@ -55,5 +56,7 @@ const Auth = {
                 }
             });
     }
+
+
 }
 export default Auth;
