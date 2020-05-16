@@ -15,7 +15,7 @@ function PublicRoute() {
                 <p className="lead">A Home that keeps you connected.</p>
             </div>
         </div>
-        <div className="container-fluid"id="homeContainer">
+        <div className="container"id="homeContainer">
             <div className="row">
                 <div className="col-sm">
                   <Card title ="About Us">

@@ -163,63 +163,103 @@ function Planner() {
                 <tbody>
                     <tr>
                         <th scope="row">0800</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">0900</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1000</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1100</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1200</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1300</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1400</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1500</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1600</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                     <tr>
                         <th scope="row">1700</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
+                        <td><textarea></textarea></td>
                     </tr>
                   
                 </tbody>

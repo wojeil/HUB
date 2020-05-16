@@ -1,10 +1,12 @@
 import React from 'react'
 import Planner from '../../components/Planner/Planner.js'
 import './style.css'
+import {Container,Row,Col} from "../../components/Grid"
 function PlannerPage () {
         
         return (
-          <div className="App">
+          <Container fluid>
+          
             <header>
               <div id="logo">
                 <span className="icon">date_range</span>
@@ -13,10 +15,13 @@ function PlannerPage () {
                 </span>
               </div>
             </header>
-            <main>
-              <Planner />
-            </main>
-          </div>
+          <Row>
+              <Col size="sm-12">
+              <Planner/>
+              </Col>
+            </Row>
+          
+          </Container>
         );
       }
 
