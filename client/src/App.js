@@ -29,7 +29,7 @@ const AuthExample = () => (
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/register" component={Register} />
 						<PrivateRoute exact path="/protected" component={UserPage} />
-						<PrivateRoute exact path="/calendar" component={PlannerPage} />
+						<PrivateRoute exact path="/planner" component={PlannerPage} />
 						<AdminRoute exact path ="/admin-dash" component={AdminPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>

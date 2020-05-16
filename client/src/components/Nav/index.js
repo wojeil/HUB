@@ -51,7 +51,7 @@ function Nav() {
               <Link style={buttonStyle} className="btn btn-danger" to="/protected">User DashBoard</Link>
             }
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-danger" to="/calendar"> Planner</Link>
+              <Link style={buttonStyle} className="btn btn-danger" to="/planner"> Planner</Link>
             }
             {user.role ==="Admin" ? <Link style={buttonStyle} className="btn btn-danger" to="/admin-dash"> DashBoard</Link> :""
               
