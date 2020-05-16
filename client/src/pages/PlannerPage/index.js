@@ -1,5 +1,5 @@
 import React from 'react'
-import Planner from '../../components/Planner/Planner.js'
+import Planner from '../../components/Planner/index.js'
 import './style.css'
 import {Container,Row,Col} from "../../components/Grid"
 function PlannerPage () {
@@ -16,7 +16,7 @@ function PlannerPage () {
               </div>
             </header>
             <hr/>
-          <Row>
+            <Row>
               <Col size="sm-12">
               <Planner/>
               </Col>
