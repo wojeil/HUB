@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
-import API from "../../utils/API"
-import FormButton from "../FormSubmitButton"
+import API from "../../utils/API";
+import FormButton from "../FormSubmitButton";
+import Card from "../Card";
 
 
 function AdminDashBoardForm({loadAnnouncements}) {
@@ -23,6 +24,7 @@ function AdminDashBoardForm({loadAnnouncements}) {
    
     
     return (
+        <Card title="Place An Announcement In Your Dashboard">
         <form
             ref={dashFormRef}
             onSubmit={handleSubmit}
@@ -45,6 +47,7 @@ function AdminDashBoardForm({loadAnnouncements}) {
             </div>
             <FormButton />
         </form>
+        </Card>
 
     );
 
