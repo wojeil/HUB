@@ -1,8 +1,8 @@
 import React from 'react'
-import CalendarTwo from '../../components/calender/calender.js'
-import './calendar.css'
-class Calendar extends React.Component{
-        render() {
+import Planner from '../../components/Planner/Planner.js'
+import './style.css'
+function PlannerPage () {
+        
         return (
           <div className="App">
             <header>
@@ -14,12 +14,11 @@ class Calendar extends React.Component{
               </div>
             </header>
             <main>
-              <CalendarTwo />
+              <Planner />
             </main>
           </div>
         );
       }
 
-}
 
-export default Calendar;
+export default PlannerPage;

@@ -13,7 +13,7 @@ import { Container } from "./components/Grid";
 import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
 import AdminPage from "./pages/AdminPage";
-import Calendar from "./pages/Calender";
+import PlannerPage from "./pages/PlannerPage";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 
@@ -29,7 +29,7 @@ const AuthExample = () => (
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/register" component={Register} />
 						<PrivateRoute exact path="/protected" component={UserPage} />
-						<PrivateRoute exact path="/calendar" component={Calendar} />
+						<PrivateRoute exact path="/calendar" component={PlannerPage} />
 						<AdminRoute exact path ="/admin-dash" component={AdminPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>
