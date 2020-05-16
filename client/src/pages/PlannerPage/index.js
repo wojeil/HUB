@@ -15,6 +15,7 @@ function PlannerPage () {
                 </span>
               </div>
             </header>
+            <hr/>
           <Row>
               <Col size="sm-12">
               <Planner/>
