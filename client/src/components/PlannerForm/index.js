@@ -21,6 +21,9 @@ function PlannerForm({loadPlans}) {
             plan: planRef.current.value
 
         })
+        .then (res=> console.log(res))
+        //.then (postPlan(res))
+        .catch(err=>console.log(err))
         loadPlans();
     }
 
