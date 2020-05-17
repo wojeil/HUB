@@ -9,11 +9,10 @@ import Auth from "./utils/Auth";
 import Nav from "./components/Nav";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import { Container } from "./components/Grid";
 import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
 import AdminPage from "./pages/AdminPage";
-import Calendar from "./pages/Calender";
+import PlannerPage from "./pages/PlannerPage";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 
@@ -23,17 +22,17 @@ const AuthExample = () => (
 		<Router>
 			<div>
 				<Nav className="App-header" />
-				<Container>
+				
 					<Switch>
 						<Route exact path="/" component={HomePage} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/register" component={Register} />
 						<PrivateRoute exact path="/protected" component={UserPage} />
-						<PrivateRoute exact path="/calendar" component={Calendar} />
+						<PrivateRoute exact path="/planner" component={PlannerPage} />
 						<AdminRoute exact path ="/admin-dash" component={AdminPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>
-				</Container>
+				
 			</div>
 		</Router>
 	</UserProvider>

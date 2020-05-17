@@ -18,6 +18,13 @@ export default {
   updateAnnouncement: function(data) {
     return axios.post("/api/dash/add", data)
     .then(res => console.log(res)).catch(err => console.log(err));
+  },
+  /////////////////////////////////////////////////////////////
+  //below contains requests for planner
+
+  addPlan: function (data) {
+    return axios.post("api/plan/add",data)
+    .then (res=> console.log(res)).catch(err=>console.log(err))
   }
 };
 
