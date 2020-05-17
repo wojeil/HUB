@@ -2,7 +2,7 @@ import React from 'react'
 import Planner from '../../components/Planner/index.js'
 import './style.css'
 import {Container,Row,Col} from "../../components/Grid"
-import CalendarTwo from '../../components/Planner/planner.js'
+import CalendarTwo from '../../components/Calendar/calendarTwo'
 function PlannerPage () {
         
         return (

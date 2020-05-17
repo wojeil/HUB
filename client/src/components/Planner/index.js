@@ -1,6 +1,6 @@
 import React from "react";
 import PlannerForm from "../PlannerForm"
-import calendarTwo from "./planner"
+
 function Planner() {
 
     return (
