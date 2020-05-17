@@ -6,8 +6,8 @@ import "./style.css"
 import API from "../../utils/API"
 
 
-function PlannerForm() {
-
+function PlannerForm({loadPlans}) {
+    
     const planFormRef= useRef();
     const dayRef= useRef();
     const timeRef= useRef();
@@ -21,7 +21,7 @@ function PlannerForm() {
             plan: planRef.current.value
 
         })
-
+        loadPlans();
     }
 
 

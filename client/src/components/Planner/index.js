@@ -1,7 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import PlannerForm from "../PlannerForm"
+import API from "../../utils/API"
 
 function Planner() {
+
+    const [plans, setPlan] = useState([])
+
+    //load all announcements
+    useEffect(() => {
+        loadPlans()
+    }, [])
+
+    function loadPlans() {
+
+        API.getPlan()
+            .then(res => {
+                console.log(res)
+                setPlan(res.data.plan)
+                console.log("userplan", res.data)
+            }
+            )
+            .catch(err => console.log(err));
+    };
 
     return (
 
@@ -23,7 +43,7 @@ function Planner() {
                 <tbody>
                     <tr>
                         <th scope="row">0800</th>
-                        <td></td>
+                        <td>{plans}</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -125,7 +145,7 @@ function Planner() {
                 </tbody>
             </table>
             
-            <PlannerForm/>
+            <PlannerForm loadPlans={loadPlans}/>
 
         </>
     );
