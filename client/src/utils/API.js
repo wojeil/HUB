@@ -22,6 +22,11 @@ export default {
   /////////////////////////////////////////////////////////////
   //below contains requests for planner
 
+  getPlan: function (){
+    return axios.get("/api/plan/get");
+  },
+
+
   addPlan: function (data) {
     return axios.post("api/plan/add",data)
     .then (res=> console.log(res)).catch(err=>console.log(err))
