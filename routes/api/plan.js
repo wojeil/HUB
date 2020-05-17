@@ -4,6 +4,6 @@ const planController = require("../../controllers/planController");
 // Matches with "/api/plan"
 
 router.route("/add")
-  .post(planController.addDash);
+  .post(planController.addPlan);
 
 module.exports = router;
