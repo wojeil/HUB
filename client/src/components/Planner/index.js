@@ -149,6 +149,7 @@ function Planner() {
     return (
 
         <>
+        
             <table className="table table-striped table-dark">
                 <thead>
                     <tr>
