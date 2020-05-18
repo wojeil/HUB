@@ -13,21 +13,27 @@ module.exports = {
         Plan.create({
             // Create empty schedule M-S
             schedule: [
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""],
-                ["test", "", "", "", "", "", ""]
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""],
+                ["", "", "", "", "", "", ""]
             ],
             owner: req.body.username
         }, (err) => {
             if (err) throw err;
         });
 
-    }
+    },
+    updatePlan: function (req, res) {
+        const { user } = req.session.passport;
+        Plan.findOneAndUpdate({ owner: user }, {schedule:req.body}).then(()=> {
+            console.log("schedule updated");
+        });
+    },
 }
