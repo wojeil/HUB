@@ -27,7 +27,13 @@ function Planner() {
  
     function clearAll() {
         API.deletePlan()
+        .then(res=> reAddPlanTable())
         .then(res => loadPlans())
+        .catch(err=> console.log(err));
+    }
+    //tetsing 
+    function reAddPlanTable(){
+        API.addPlan().then(()=> console.log("plannner set to start"))
         .catch(err=> console.log(err));
     }
 
