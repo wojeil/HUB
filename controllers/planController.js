@@ -39,8 +39,7 @@ module.exports = {
 
     removePlan: function (req,res) {
         const {user} = req.session.passport;
-        Plan.find ({owner:user}).then(plans=> plans.remove())
-        .then(plans => res.json(plans))
+        Plan.deleteMany ({owner:user},{schedule:req.body}).then(console.log("schedule cleared"))
         .catch(err => res.status(422).json(err));
     }
 }

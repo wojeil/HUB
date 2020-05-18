@@ -1,9 +1,9 @@
 import React from "react"
 
-function ClearAllButton (){
+function ClearAllButton (props){
 
     return (
-        <button className="btn" role= "button"> Clear All </button>
+        <button className="btn" {...props} role= "button"> Clear All </button>
     )
 }
 

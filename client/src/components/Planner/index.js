@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import PlannerForm from "../PlannerForm"
 import API from "../../utils/API"
+import ClearAllButton from "../ClearAllButton"
 
 function Planner() {
 
@@ -23,7 +24,12 @@ function Planner() {
             })
             .catch(err => console.log(err));
     };
-    const update = plans;
+ 
+    function clearAll() {
+        API.deletePlan()
+        .then(res => loadPlans())
+        .catch(err=> console.log(err));
+    }
 
     return (
 
@@ -126,7 +132,9 @@ function Planner() {
                     </tr>
                   
                 </tbody>
+                
             </table>
+            <ClearAllButton onClick={()=> clearAll()}/>
             
             <PlannerForm loadPlans={loadPlans} update={plans}/>
 

@@ -35,8 +35,8 @@ export default {
     return axios.post("api/plan/update",data)
   },
 
-  deletePlan: function (){
-    return axios.delete("api/plan/remove")
+  deletePlan: function (data){
+    return axios.delete("api/plan/remove",data)
   }
 };
 
