@@ -13,7 +13,7 @@ import addMonths from 'date-fns/addMonths';
  import toDate from 'date-fns/toDate'
 
 
- class CalendarTwo extends React.Component {
+ class Calendar extends React.Component {
      state = {
          currentMonth: new Date(),
          selectedDate: new Date()
@@ -140,4 +140,4 @@ import addMonths from 'date-fns/addMonths';
      }
  }
 
- export default CalendarTwo;
+ export default Calendar;

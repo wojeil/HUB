@@ -2,7 +2,7 @@ import React from 'react'
 import Planner from '../../components/Planner/index.js'
 import './style.css'
 import {Container,Row,Col} from "../../components/Grid"
-import CalendarTwo from '../../components/Calendar/calendarTwo'
+import Calendar from '../../components/Calendar'
 function PlannerPage () {
         
         return (
@@ -17,7 +17,7 @@ function PlannerPage () {
               </div>
             </header>
             <hr/>
-            <CalendarTwo/>
+            <Calendar/>
              <hr/>
             <Row>
               <Col size="sm-12">

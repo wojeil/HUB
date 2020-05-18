@@ -5,7 +5,7 @@ import API from "../../utils/API"
 function Planner() {
 
     const [plans, setPlan] = useState([])
-
+    
     //load all announcements
     useEffect(() => {
         loadPlans()
@@ -16,7 +16,7 @@ function Planner() {
         API.getPlan()
             .then(res => {
                 console.log(res)
-                setPlan(res.data.plan)
+                setPlan(res.data.schedule)
                 console.log("userplan", res.data)
             }
             )
@@ -43,103 +43,84 @@ function Planner() {
                 <tbody>
                     <tr>
                         <th scope="row">0800</th>
-                        <td>{plans}</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[0].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
+
                     </tr>
                     <tr>
                         <th scope="row">0900</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[1].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1000</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[2].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1100</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[3].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1200</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[4].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1300</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[5].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1400</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[6].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1500</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[7].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1600</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[8].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                     <tr>
                         <th scope="row">1700</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        {plans[9].map((plan, i) => {
+                            return (
+                                <td key={i} >{plan}</td>
+                            )
+                        })}
                     </tr>
                   
                 </tbody>
