@@ -6,5 +6,8 @@ router.route("/get")
     .get(planController.getPlan);
 router.route("/post")
   .post(planController.addPlan);
+  router.route("/update")
+  .post(planController.updatePlan);
+
 
 module.exports = router;
