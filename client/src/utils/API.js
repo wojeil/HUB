@@ -29,7 +29,7 @@ export default {
 
   addPlan: function (data) {
     return axios.post("api/plan/add",data)
-    .then (res=> console.log(res)).catch(err=>console.log(err))
+    
   }
 };
 
