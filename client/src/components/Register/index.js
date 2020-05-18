@@ -23,7 +23,18 @@ function Register() {
 					console.log(`New Dash Created For ${data.username}`)
 				}
 			})
-		}
+		};
+		fetch("api/plan/post", {
+			method: "POST",
+			body: JSON.stringify(data),
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			credentials: 'include'
+		}).then(res => {
+			console.log("Empty Plan Created");
+		})
+		
 		fetch('api/users/register', {
 			method: 'POST',
 			body: JSON.stringify(data),

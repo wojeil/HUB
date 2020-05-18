@@ -4,7 +4,7 @@ const planController = require("../../controllers/planController");
 // Matches with "/api/plan"
 router.route("/get")
     .get(planController.getPlan);
-router.route("/add")
+router.route("/post")
   .post(planController.addPlan);
 
 module.exports = router;
