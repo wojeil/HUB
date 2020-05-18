@@ -24,7 +24,7 @@ function PlannerForm({loadPlans,update}) {
         console.log(sendPlans)
         API.updatePlan(sendPlans)
         .then (res=> console.log(res))
-        planRef.current.value = ""
+        //.then (postPlan(res))
         .catch(err=>console.log(err))
         loadPlans();
     }
