@@ -9,5 +9,7 @@ router.route("/post")
   router.route("/update")
   .post(planController.updatePlan);
 
+  router.route("/remove")
+  .delete(planController.removePlan);
 
 module.exports = router;

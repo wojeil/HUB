@@ -36,4 +36,11 @@ module.exports = {
             console.log("schedule updated");
         });
     },
+
+    removePlan: function (req,res) {
+        const {user} = req.session.passport;
+        Plan.find ({owner:user}).then(plans=> plans.remove())
+        .then(plans => res.json(plans))
+        .catch(err => res.status(422).json(err));
+    }
 }
