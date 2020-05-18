@@ -6,7 +6,7 @@ import "./style.css"
 import API from "../../utils/API"
 
 
-function PlannerForm({loadPlans}) {
+function PlannerForm({loadPlans,update}) {
     
     const planFormRef= useRef();
     const dayRef= useRef();
@@ -15,10 +15,16 @@ function PlannerForm({loadPlans}) {
 
     const handleSubmit=(e) =>{
         e.preventDefault();
+        console.log(update)
+        console.log(parseInt(timeRef.current.value))
+        const updatedplan = update[parseInt(timeRef.current.value)]
+        updatedplan.splice(dayRef.current.value, 1,planRef.current.value)
+        const sendPlans= update
+        sendPlans.splice(timeRef.current.value, 1 , updatedplan)
+        console.log(sendPlans)
         API.addPlan({
-            day: dayRef.current.value,
-            time: timeRef.current.value,
-            plan: planRef.current.value
+
+            sendPlans
 
         })
         .then (res=> console.log(res))
@@ -40,28 +46,28 @@ function PlannerForm({loadPlans}) {
                 <div className="form-group">
                     <label for="exampleFormControlSelect1">Day:</label>
                     <select ref={dayRef} className="form-control" id="exampleFormControlSelect1">
-                        <option>Monday</option>
-                        <option>Tuesday</option>
-                        <option>Wednesday</option>
-                        <option>Thursday</option>
-                        <option>Friday</option>
-                        <option>Saturday</option>
-                        <option>Sunday</option>
+                        <option value="0">Monday</option>
+                        <option value="1">Tuesday</option>
+                        <option value="2">Wednesday</option>
+                        <option value="3">Thursday</option>
+                        <option value="4">Friday</option>
+                        <option value="5">Saturday</option>
+                        <option value="6">Sunday</option>
                     </select>
                 </div>
                 <div className="form-group">
                     <label for="exampleFormControlSelect1">Time:</label>
                     <select ref={timeRef} className="form-control" id="exampleFormControlSelect1">
-                        <option>0800</option>
-                        <option>0900</option>
-                        <option>1000</option>
-                        <option>1100</option>
-                        <option>1200</option>
-                        <option>1300</option>
-                        <option>1400</option>
-                        <option>1500</option>
-                        <option>1600</option>
-                        <option>1700</option>
+                        <option value="0">0800</option>
+                        <option value="1">0900</option>
+                        <option value="2">1000</option>
+                        <option value="3">1100</option>
+                        <option value="4">1200</option>
+                        <option value="5">1300</option>
+                        <option value="6">1400</option>
+                        <option value="7">1500</option>
+                        <option value="8">1600</option>
+                        <option value="9">1700</option>
                     </select>
                 </div>
                 <div className="form-group">

@@ -23,6 +23,7 @@ function Planner() {
             })
             .catch(err => console.log(err));
     };
+    const update = plans;
 
     return (
 
@@ -127,7 +128,7 @@ function Planner() {
                 </tbody>
             </table>
             
-            <PlannerForm loadPlans={loadPlans}/>
+            <PlannerForm loadPlans={loadPlans} update={plans}/>
 
         </>
     );
