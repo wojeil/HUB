@@ -4,22 +4,23 @@ import API from "../../utils/API"
 
 function Planner() {
 
-    const [plans, setPlan] = useState([])
+    const [plans, setPlan] = useState("")
     
-    //load all announcements
+    // load all announcements
     useEffect(() => {
-        loadPlans()
-    }, [])
+        loadPlans();
+    },[])
 
     function loadPlans() {
 
         API.getPlan()
             .then(res => {
-                console.log(res)
-                setPlan(res.data.schedule)
-                console.log("userplan", res.data)
+                setPlan(res.data[0].schedule);
+                console.log("userplan", res.data);
             }
-            )
+            ).then(() => {
+                console.log("the schedule", plans);
+            })
             .catch(err => console.log(err));
     };
 
@@ -43,7 +44,7 @@ function Planner() {
                 <tbody>
                     <tr>
                         <th scope="row">0800</th>
-                        {plans[0].map((plan, i) => {
+                        {!plans ? "" :plans[0].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -52,7 +53,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">0900</th>
-                        {plans[1].map((plan, i) => {
+                        {!plans ? "" :plans[1].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -60,7 +61,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1000</th>
-                        {plans[2].map((plan, i) => {
+                        {!plans ? "" :plans[2].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -68,7 +69,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1100</th>
-                        {plans[3].map((plan, i) => {
+                        {!plans ? "" :plans[3].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -76,7 +77,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1200</th>
-                        {plans[4].map((plan, i) => {
+                        {!plans ? "" :plans[4].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -84,7 +85,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1300</th>
-                        {plans[5].map((plan, i) => {
+                        {!plans ? "" :plans[5].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -92,7 +93,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1400</th>
-                        {plans[6].map((plan, i) => {
+                        {!plans ? "" :plans[6].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -100,7 +101,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1500</th>
-                        {plans[7].map((plan, i) => {
+                        {!plans ? "" :plans[7].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -108,7 +109,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1600</th>
-                        {plans[8].map((plan, i) => {
+                        {!plans ? "" :plans[8].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
@@ -116,7 +117,7 @@ function Planner() {
                     </tr>
                     <tr>
                         <th scope="row">1700</th>
-                        {plans[9].map((plan, i) => {
+                        {!plans ? "" :plans[9].map((plan, i) => {
                             return (
                                 <td key={i} >{plan}</td>
                             )
