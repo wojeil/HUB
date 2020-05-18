@@ -22,15 +22,15 @@ function PlannerForm({loadPlans,update}) {
         const sendPlans= update
         sendPlans.splice(timeRef.current.value, 1 , updatedplan)
         console.log(sendPlans)
-        API.addPlan({
+        API.updatePlan({
 
             sendPlans
 
         })
         .then (res=> console.log(res))
-        //.then (postPlan(res))
         .catch(err=>console.log(err))
         loadPlans();
+        planRef.current.value = ""
     }
 
 

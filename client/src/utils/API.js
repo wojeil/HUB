@@ -27,8 +27,8 @@ export default {
   },
 
 
-  addPlan: function (data) {
-    return axios.post("api/plan/add",data)
+  updatePlan: function (data) {
+    return axios.post("api/plan/update",data)
     
   }
 };
