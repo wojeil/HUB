@@ -48,17 +48,17 @@ function Nav() {
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-danger" to="/protected">User DashBoard</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/protected">User DashBoard</Link>
             }
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-danger" to="/planner"> Planner</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/planner"> Planner</Link>
             }
             {user.role ==="Admin" ? <Link style={buttonStyle} className="btn btn-danger" to="/admin-dash"> DashBoard</Link> :""
               
             }
 
             {user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-warning" to="/register">Register a New User</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/register">Register a New User</Link>
             }
             <AuthButton />
           </li>

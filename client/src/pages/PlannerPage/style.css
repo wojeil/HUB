@@ -18,16 +18,6 @@
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
-
-:root {
-  --main-color: #1a8fff;
-  --text-color: #777;
-  --text-color-light: #ccc;
-  --border-color: #eee;
-  --bg-color: #f9f9f9;
-  --neutral-color: #fff;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -154,7 +144,7 @@ main {
 
 .cell {
   position: relative;
-  height: 5em;
+  height: 3em;
   border-right: 1px solid #eee;
   overflow: hidden;
   cursor: pointer;

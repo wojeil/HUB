@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import LoginForm from "../LoginForm";
 import Auth from "../../utils/Auth";
 import { useLocation, useHistory } from "react-router";
+import styles from "./mystyle.module.css"
 //Uses the Auth methods to actually login with the LoginForm Component.
 
 function Login() {
@@ -50,12 +51,12 @@ function Login() {
 				console.log('Error logging in.', err);
 			});
 	}
-
+    {
 	return (
-		<div>
+		<div className={styles.bigblue}>
 			<LoginForm onLogin={login} />
 		</div>
 	)
 }
-
+}
 export default Login;
