@@ -1,7 +1,7 @@
 import React from "react"
 import {Container} from "../Grid"
-import Planner from "../Planner"
 import Card from "../Card"
+import TeamMates from "../TeamMates"
 
 
 function PlannerSearch (){
@@ -9,8 +9,10 @@ function PlannerSearch (){
     return(
         
         <Container>
-            <Planner/>
-            <Card/>
+            <TeamMates/>
+            <Card title="Find Your TeamMate's Planner">
+
+            </Card>
         </Container>
     )
 }
