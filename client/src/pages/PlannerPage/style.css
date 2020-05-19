@@ -187,11 +187,11 @@ main {
   border-bottom: none;
 }
 
-.calendar .body .cell:last-child {
+.cell:last-child {
   border-right: none;
 }
 
-.calendar .body .cell .number {
+.number {
   position: absolute;
   font-size: 82.5%;
   line-height: 1;
@@ -200,7 +200,7 @@ main {
   font-weight: 700;
 }
 
-.calendar .body .disabled {
+.disabled {
   color: var(--text-color-light);
   pointer-events: none;
 }
