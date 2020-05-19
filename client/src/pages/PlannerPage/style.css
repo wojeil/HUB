@@ -43,8 +43,8 @@ body {
     font-size: 1em;
     font-weight: 300;
     line-height: 1.5;
-    color: var(--text-color);
-    background: var(--bg-color);
+    color: #777;
+    background:lightblue ;
     position: relative;
 }
 
@@ -158,7 +158,7 @@ main {
   border-bottom: 1px solid var(--border-color);
 }
 
-.calendar .body .cell {
+.cell {
   position: relative;
   height: 5em;
   border-right: 1px solid var(--border-color);
@@ -168,22 +168,22 @@ main {
   transition: 0.25s ease-out;
 }
 
-.calendar .body .cell:hover {
+.cell:hover {
   background: var(--bg-color);
   transition: 0.5s ease-out;
 }
 
-.calendar .body .selected {
+.selected {
   border-left: 10px solid transparent;
   border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
   border-image-slice: 1;
 }
 
-.calendar .body .row {
+.row {
   border-bottom: 1px solid var(--border-color);
 }
 
-.calendar .body .row:last-child {
+.row:last-child {
   border-bottom: none;
 }
 
