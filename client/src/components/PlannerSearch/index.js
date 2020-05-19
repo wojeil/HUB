@@ -36,11 +36,11 @@ function PlannerSearch() {
                 <div className="form-group">
                     <label for="exampleFormControlSelect1">Example select</label>
                     <select className="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    {!users ? "" :users.map((user, i) => {
+                            return (
+                                <option key={i} >{user}</option>
+                            )
+                        })}
                     </select>
                 </div>
             </form>
