@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Announcements from "../Announcement"
 import API from "../../utils/API"
 import { Row, Col } from "../Grid"
+import "./style.css"
 function UserDashBoard (){
 
     const [announcements, setAnnouncements] = useState([])
@@ -37,7 +38,7 @@ function UserDashBoard (){
    
 
     return(
-        <div className="container" id="dashBoard">
+        <div className="user" id="dashBoard">
         <Row>
             <Col size="sm-6">
                 <div id="shortTerm">
