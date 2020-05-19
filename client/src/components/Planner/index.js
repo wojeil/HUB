@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import PlannerForm from "../PlannerForm"
 import API from "../../utils/API"
 import ClearAllButton from "../ClearAllButton"
 
 function Planner() {
-
     const [plans, setPlan] = useState("")
     
     // load all announcements
@@ -26,15 +25,23 @@ function Planner() {
     };
  
     function clearAll() {
-        API.deletePlan()
-        .then(res=> reAddPlanTable())
-        .then(res => loadPlans())
+        API.updatePlan([
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""]
+        ])
+        .then(()=>{
+            console.log("Schedule Deleted")
+        })
         .catch(err=> console.log(err));
-    }
-    //tetsing 
-    function reAddPlanTable(){
-        API.addPlan().then(()=> console.log("plannner set to start"))
-        .catch(err=> console.log(err));
+        loadPlans();
     }
 
     return (

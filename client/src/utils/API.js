@@ -33,10 +33,6 @@ export default {
   },
   updatePlan: function (data) {
     return axios.post("api/plan/update",data)
-  },
-
-  deletePlan: function (data){
-    return axios.delete("api/plan/remove",data)
   }
 };
 
