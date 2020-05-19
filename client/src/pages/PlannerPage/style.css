@@ -19,9 +19,6 @@
   font-feature-settings: 'liga';
 }
 
-
-/* VARIABLES */
-
 :root {
   --main-color: #1a8fff;
   --text-color: #777;
@@ -30,9 +27,6 @@
   --bg-color: #f9f9f9;
   --neutral-color: #fff;
 }
-
-
-/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -44,7 +38,7 @@ body {
     font-weight: 300;
     line-height: 1.5;
     color: #777;
-    background:lightblue ;
+    background: #eee ;
     position: relative;
 }
 
@@ -122,7 +116,7 @@ main {
   border: 1px solid var(--border-color);
 }
 
-.calendar .header {
+.header {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 115%;
@@ -130,22 +124,22 @@ main {
   border-bottom: 1px solid var(--border-color);
 }
 
-.calendar .header .icon {
+.icon {
   cursor: pointer;
   transition: .15s ease-out;
 }
 
-.calendar .header .icon:hover {
+.icon:hover {
   transform: scale(1.75);
   transition: .25s ease-out;
   color: var(--main-color);
 }
 
-.calendar .header .icon:first-of-type {
+.icon:first-of-type {
   margin-left: 1em;
 }
 
-.calendar .header .icon:last-of-type {
+.icon:last-of-type {
   margin-right: 1em;
 }
 
@@ -205,7 +199,7 @@ main {
   pointer-events: none;
 }
 
-.calendar .body .cell .bg {
+.bg {
   font-weight: 700;
   line-height: 1;
   color: var(--main-color);
