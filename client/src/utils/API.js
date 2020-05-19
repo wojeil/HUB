@@ -28,13 +28,19 @@ export default {
 
 
   addPlan: function (data) {
-    return axios.post("api/plan/add",data)
+    return axios.post("api/plan/post",data)
     
   },
   updatePlan: function (data) {
     return axios.post("api/plan/update",data)
+  },
+
+  deletePlan: function (data){
+    return axios.delete("api/plan/remove",data)
   }
 };
+
+
 
 
 //   // Gets the Announcement with the given id

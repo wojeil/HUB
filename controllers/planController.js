@@ -36,4 +36,10 @@ module.exports = {
             console.log("schedule updated");
         });
     },
+
+    removePlan: function (req,res) {
+        const {user} = req.session.passport;
+        Plan.deleteMany ({owner:user},{schedule:req.body}).then(console.log("schedule cleared"))
+        .catch(err => res.status(422).json(err));
+    }
 }
