@@ -5,5 +5,5 @@ router.route("/team")
     .get(searchController.getTeam);
 
 router.route("/:user")
-    .get(searchController.getUser)
+    .get(searchController.getUser);
 module.exports = router;

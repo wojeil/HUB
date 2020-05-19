@@ -9,5 +9,11 @@ module.exports = {
             .then(users => {
                 res.json(users);
             })
+    },
+    getUser: function (req, res) {
+        Plan.findOne({owner:req.params.user})
+        .then(schedule => {
+            res.json(schedule);
+        })
     }
 }
