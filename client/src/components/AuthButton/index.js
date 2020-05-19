@@ -14,10 +14,13 @@ const AuthButton = () => {
 		Auth.isAuthenticated ? (
 			<button className="btn btn-danger"
 				onClick={() => {
-					Auth.signout(() => history.push('/login'))
-					dispatch({
-						type: "GET_USER",
-						payload: {}
+					Auth.signout(() => {
+						history.push('/login')
+						dispatch({
+							type: "GET_USER",
+							payload: {}
+						})
+
 					})
 				}}>
 				Logout
