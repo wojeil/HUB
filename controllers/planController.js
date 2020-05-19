@@ -35,5 +35,5 @@ module.exports = {
         Plan.findOneAndUpdate({ owner: user }, {schedule:req.body}).then(()=> {
             console.log("schedule updated");
         });
-    },
+    }
 }

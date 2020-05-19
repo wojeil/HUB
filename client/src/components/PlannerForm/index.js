@@ -27,6 +27,7 @@ function PlannerForm({loadPlans,update}) {
         //.then (postPlan(res))
         .catch(err=>console.log(err))
         loadPlans();
+        planRef.current.value = "";
     }
 
 

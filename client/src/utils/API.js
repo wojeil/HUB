@@ -28,13 +28,26 @@ export default {
 
 
   addPlan: function (data) {
-    return axios.post("api/plan/add",data)
+    return axios.post("api/plan/post",data)
     
   },
   updatePlan: function (data) {
     return axios.post("api/plan/update",data)
+  },
+
+   /////////////////////////////////////////////////////////////
+  //below contains requests for plannerSearch
+
+  getUser: function (){
+    return axios.get("api/search/team")
+  },
+
+  getUserzPlanner: function (){
+    return axios.get("api/search/:user")
   }
 };
+
+
 
 
 //   // Gets the Announcement with the given id

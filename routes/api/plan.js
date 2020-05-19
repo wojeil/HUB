@@ -9,5 +9,4 @@ router.route("/post")
   router.route("/update")
   .post(planController.updatePlan);
 
-
 module.exports = router;

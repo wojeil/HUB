@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import PlannerForm from "../PlannerForm"
 import API from "../../utils/API"
+import ClearAllButton from "../ClearAllButton"
 
 function Planner() {
-
     const [plans, setPlan] = useState("")
     
-    // load all announcements
+    // load all plans
     useEffect(() => {
         loadPlans();
     },[])
@@ -23,7 +23,26 @@ function Planner() {
             })
             .catch(err => console.log(err));
     };
-    const update = plans;
+ 
+    function clearAll() {
+        API.updatePlan([
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""],
+            ["", "", "", "", "", "", ""]
+        ])
+        .then(()=>{
+            console.log("Schedule Deleted")
+        })
+        .catch(err=> console.log(err));
+        loadPlans();
+    }
 
     return (
 
@@ -126,7 +145,9 @@ function Planner() {
                     </tr>
                   
                 </tbody>
+                
             </table>
+            <ClearAllButton onClick={()=> clearAll()}/>
             
             <PlannerForm loadPlans={loadPlans} update={plans}/>
 
