@@ -46,14 +46,14 @@ header {
   display: block;
   width: 100%;
   padding: 1.75em 0;
-  border-bottom: 1px solid var(--border-color);
-  background: var(--neutral-color);
+  border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
 header #logo {
   font-size: 175%;
   text-align: center;
-  color: var(--main-color);
+  color: #1a8fff;
   line-height: 1;
 }
 
@@ -112,8 +112,8 @@ main {
   display: block;
   position: relative;
   width: 100%;
-  background: var(--neutral-color);
-  border: 1px solid var(--border-color);
+  background: #eee;
+  border: 1px solid #fff;
 }
 
 .header {
@@ -121,7 +121,7 @@ main {
   font-weight: 700;
   font-size: 115%;
   padding: 1.5em 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #eee;
 }
 
 .icon {
@@ -132,7 +132,7 @@ main {
 .icon:hover {
   transform: scale(1.75);
   transition: .25s ease-out;
-  color: var(--main-color);
+  color: #1a8fff;
 }
 
 .icon:first-of-type {
@@ -143,38 +143,38 @@ main {
   margin-right: 1em;
 }
 
-.calendar .days {
+.days {
   text-transform: uppercase;
   font-weight: 400;
-  color: var(--text-color-light);
+  color: darkgray;
   font-size: 70%;
   padding: .75em 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #eee;
 }
 
 .cell {
   position: relative;
   height: 5em;
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid #eee;
   overflow: hidden;
   cursor: pointer;
-  background: var(--neutral-color);
+  background: #fff;
   transition: 0.25s ease-out;
 }
 
 .cell:hover {
-  background: var(--bg-color);
+  background: #f9f9f9;
   transition: 0.5s ease-out;
 }
 
 .selected {
   border-left: 10px solid transparent;
-  border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
+  border-image: linear-gradient(45deg, black 0%,black 40%);
   border-image-slice: 1;
 }
 
 .row {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #eee;
 }
 
 .row:last-child {
@@ -195,7 +195,7 @@ main {
 }
 
 .disabled {
-  color: var(--text-color-light);
+  color: #ccc;
   pointer-events: none;
 }
 
