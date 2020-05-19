@@ -6,7 +6,7 @@ import ClearAllButton from "../ClearAllButton"
 function Planner() {
     const [plans, setPlan] = useState("")
     
-    // load all announcements
+    // load all plans
     useEffect(() => {
         loadPlans();
     },[])

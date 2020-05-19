@@ -33,6 +33,17 @@ export default {
   },
   updatePlan: function (data) {
     return axios.post("api/plan/update",data)
+  },
+
+   /////////////////////////////////////////////////////////////
+  //below contains requests for plannerSearch
+
+  getUser: function (){
+    return axios.get("api/search/team")
+  },
+
+  getUserzPlanner: function (){
+    return axios.get("api/search/:user")
   }
 };
 

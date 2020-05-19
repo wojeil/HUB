@@ -11,7 +11,7 @@ function PlannerSearch (){
         <Container>
             <TeamMates/>
             <Card title="Find Your TeamMate's Planner">
-
+                
             </Card>
         </Container>
     )
