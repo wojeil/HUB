@@ -1,5 +1,5 @@
 import React from 'react';
-import "./index.css";
+import "./mylogin.css";
 import Card from "../../components/Card";
 
 
@@ -15,9 +15,10 @@ function PublicRoute() {
                 <p className="lead">A Home that keeps you connected.</p>
             </div>
         </div>
-        <div className="container"id="homeContainer">
-            <div className="row">
-                <div className="col-sm">
+
+        <div className="about" id="homeContainer">
+            <div className="row" id="homerow">
+                <div className="col">
                   <Card title ="About Us">
                       <p>We are your convenience in a workplace enviroment. The HUB was designed to facilitate work-flow through efficient communication. We believe Teamwork and Communication amongst peers will lead to greater results. 
                       Sign Up and experience success.</p>

@@ -3,6 +3,7 @@ import Announcements from "../Announcement"
 import API from "../../utils/API"
 import AdminDashBoardForm from "../AdminDashBoardForm"
 import { Row, Col } from "../Grid"
+import "./style.css"
 function AdminDashBoard() {
 
     const [announcements, setAnnouncements] = useState([])
@@ -39,7 +40,7 @@ function AdminDashBoard() {
     console.log(filterLongAn);
 
     return (
-        <div className="container" id="dashBoard">
+        <div className="admin" id="dashBoard">
             <Row>
                 <Col size="sm-6">
                     <div id="shortTerm">

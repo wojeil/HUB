@@ -20,19 +20,6 @@
 }
 
 
-/* VARIABLES */
-
-:root {
-  --main-color: #1a8fff;
-  --text-color: #777;
-  --text-color-light: #ccc;
-  --border-color: #eee;
-  --bg-color: #f9f9f9;
-  --neutral-color: #fff;
-}
-
-
-/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -43,8 +30,8 @@ body {
     font-size: 1em;
     font-weight: 300;
     line-height: 1.5;
-    color: var(--text-color);
-    background: var(--bg-color);
+    color: #777;
+    background: #eee ;
     position: relative;
 }
 
@@ -52,14 +39,14 @@ header {
   display: block;
   width: 100%;
   padding: 1.75em 0;
-  border-bottom: 1px solid var(--border-color);
-  background: var(--neutral-color);
+  border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
 header #logo {
   font-size: 175%;
   text-align: center;
-  color: var(--main-color);
+  color: #1a8fff;
   line-height: 1;
 }
 
@@ -118,80 +105,80 @@ main {
   display: block;
   position: relative;
   width: 100%;
-  background: var(--neutral-color);
-  border: 1px solid var(--border-color);
+  background: #eee;
+  border: 1px solid #fff;
 }
 
-.calendar .header {
+.header {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 115%;
   padding: 1.5em 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #eee;
 }
 
-.calendar .header .icon {
+.icon {
   cursor: pointer;
   transition: .15s ease-out;
 }
 
-.calendar .header .icon:hover {
+.icon:hover {
   transform: scale(1.75);
   transition: .25s ease-out;
-  color: var(--main-color);
+  color: #1a8fff;
 }
 
-.calendar .header .icon:first-of-type {
+.icon:first-of-type {
   margin-left: 1em;
 }
 
-.calendar .header .icon:last-of-type {
+.icon:last-of-type {
   margin-right: 1em;
 }
 
-.calendar .days {
+.days {
   text-transform: uppercase;
   font-weight: 400;
-  color: var(--text-color-light);
+  color: darkgray;
   font-size: 70%;
   padding: .75em 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid #eee;
 }
 
-.calendar .body .cell {
+.cell {
   position: relative;
-  height: 5em;
-  border-right: 1px solid var(--border-color);
+  height: 3em;
+  border-right: 1px solid #eee;
   overflow: hidden;
   cursor: pointer;
-  background: var(--neutral-color);
+  background: #fff;
   transition: 0.25s ease-out;
 }
 
-.calendar .body .cell:hover {
-  background: var(--bg-color);
+.cell:hover {
+  background: #f9f9f9;
   transition: 0.5s ease-out;
 }
 
-.calendar .body .selected {
+.selected {
   border-left: 10px solid transparent;
-  border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
+  border-image: linear-gradient(45deg, black 0%,black 40%);
   border-image-slice: 1;
 }
 
-.calendar .body .row {
-  border-bottom: 1px solid var(--border-color);
+.row {
+  border-bottom: 1px solid #eee;
 }
 
-.calendar .body .row:last-child {
+.row:last-child {
   border-bottom: none;
 }
 
-.calendar .body .cell:last-child {
+.cell:last-child {
   border-right: none;
 }
 
-.calendar .body .cell .number {
+.number {
   position: absolute;
   font-size: 82.5%;
   line-height: 1;
@@ -200,12 +187,12 @@ main {
   font-weight: 700;
 }
 
-.calendar .body .disabled {
-  color: var(--text-color-light);
+.disabled {
+  color: #ccc;
   pointer-events: none;
 }
 
-.calendar .body .cell .bg {
+.bg {
   font-weight: 700;
   line-height: 1;
   color: var(--main-color);

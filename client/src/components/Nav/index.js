@@ -47,22 +47,21 @@ function Nav() {
         {user.username ? <span className="userText text-white ml-3 pt-1" to="#">Hi {user.username} !</span> : ""}
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ">
-            {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-danger" to="/protected">DashBoard</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/protected">DashBoard</Link>
             }
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-danger" to="/planner-search">{user.username}'s TEAM</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/planner-search">{user.username}'s TEAM</Link>
             }
 
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-danger" to="/planner">Your Planner</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/planner">Your Planner</Link>
             }
-            {user.role === "Admin" ? <Link style={buttonStyle} className="btn btn-danger" to="/admin-dash">Edit DashBoard</Link> : ""
+            {user.role === "Admin" ? <Link style={buttonStyle} className="btn btn-light" to="/admin-dash">Edit DashBoard</Link> : ""
 
             }
 
             {user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-warning" to="/register">Register a New User</Link>
+              <Link style={buttonStyle} className="btn btn-light" to="/register">Register a New User</Link>
             }
             <AuthButton />
           </li>
