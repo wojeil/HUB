@@ -47,7 +47,7 @@ function Nav() {
         {user.username ? <span className="userText text-white ml-3 pt-1" to="#">Hi {user.username} !</span> : ""}
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ">
-          {!user.username ? "" :
+            {!user.username ? "" :
               <Link style={buttonStyle} className="btn btn-light" to="/protected">DashBoard</Link>
             }
             {!user.username ? "" :
