@@ -9,9 +9,9 @@ function TeamMates ({planners,userNames}){
         
         <table className="table table-striped table-dark">
          <thead>
-                    <tr><th id="userNames"> 
-                       
-                            {userNames}
+                    <tr><th > 
+                            {!userNames ? "" :   <span className="userNames"> {userNames} </span>}
+                         
                  
                   </th></tr>
                 <tr> 

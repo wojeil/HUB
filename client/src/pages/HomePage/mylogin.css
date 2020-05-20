@@ -36,3 +36,7 @@
         -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+#homeContainer {
+        margin-top: 550px;
+}
