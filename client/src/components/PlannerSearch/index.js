@@ -8,13 +8,14 @@ import API from "../../utils/API"
 function PlannerSearch() {
 
     const [users, setUser] = useState("")
+    const [planners, setPlanner] =useState("")
 
 
     useEffect(() => {
-        loadPlans();
+        loadUsers();
     }, [])
 
-    function loadPlans() {
+    function loadUsers() {
         const newUsers =[]
         
         API.getUser()
@@ -33,6 +34,25 @@ function PlannerSearch() {
             .catch(err => console.log(err));
     };
 
+  
+    
+  
+    function handleClick (){
+
+    API.getUserzPlanner()
+    .then(res => {
+        // setPlan(res.data[0].schedule);
+        console.log("userzplan", res);
+    }
+    ).then(() => {
+        console.log("the selected schedule", planners);
+    })
+    .catch(err => console.log(err));
+ };
+
+ 
+
+
     return (
 
         <Container>
@@ -44,7 +64,7 @@ function PlannerSearch() {
                         <select className="form-control" id="exampleFormControlSelect1">
                             {!users ? "" : users.map((user, i) => {
                                 return (
-                                    <option key={i} >{user}</option>
+                                    <option key={i} onClick={handleClick}>{user}</option>
                                 )
                             })}
                         </select>
