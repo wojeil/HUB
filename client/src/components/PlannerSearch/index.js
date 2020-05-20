@@ -9,7 +9,7 @@ function PlannerSearch() {
 
     const [users, setUser] = useState("")
     const [planners, setPlanner] =useState("")
-
+  
 
     useEffect(() => {
         loadUsers();
@@ -37,11 +37,12 @@ function PlannerSearch() {
   
     
   
-    function handleClick (){
-
-    API.getUserzPlanner()
+    function handleClick (e){
+        e.preventDefault();
+        console.log(e.target,"it clicks")
+    API.getUserzPlanner(e.target.value )
     .then(res => {
-        // setPlan(res.data[0].schedule);
+        setPlanner(res.data);
         console.log("userzplan", res);
     }
     ).then(() => {
@@ -61,10 +62,10 @@ function PlannerSearch() {
                 <form>
                     <div className="form-group">
                         <label for="exampleFormControlSelect1">Example select</label>
-                        <select className="form-control" id="exampleFormControlSelect1">
+                        <select className="form-control" id="exampleFormControlSelect1" onClick={handleClick}>
                             {!users ? "" : users.map((user, i) => {
                                 return (
-                                    <option key={i} onClick={handleClick}>{user}</option>
+                                    <option value={user} key={i} >{user}</option>
                                 )
                             })}
                         </select>
