@@ -21,7 +21,7 @@ function PlannerSearch() {
         API.getUser()
             .then(res => {
           
-                console.log("user", res.data);
+                // console.log("user", res.data);
                 res.data.forEach(element => {
                     return newUsers.push(element.username);
                     
@@ -29,7 +29,7 @@ function PlannerSearch() {
             }
             ).then(() => {
                 setUser(newUsers);
-                console.log("the user", newUsers);
+                // console.log("the user", newUsers);
             })
             .catch(err => console.log(err));
     };
@@ -39,14 +39,14 @@ function PlannerSearch() {
   
     function handleClick (e){
         e.preventDefault();
-        console.log(e.target,"it clicks")
+        // console.log(e.target,"it clicks")
     API.getUserzPlanner(e.target.value )
     .then(res => {
         setPlanner(res.data.schedule);
-        console.log("userzplan", res.data.schedule);
+        // console.log("userzplan", res.data.schedule);
     }
     ).then(() => {
-        console.log("the selected schedule", planners);
+         console.log("the selected schedule", planners);
     })
     .catch(err => console.log(err));
  };
