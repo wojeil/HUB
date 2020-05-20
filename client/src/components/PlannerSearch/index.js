@@ -20,7 +20,7 @@ function PlannerSearch() {
         API.getUser()
             .then(res => {
           
-                console.log("user", res.data);
+                // console.log("user", res.data);
                 res.data.forEach(element => {
                     return newUsers.push(element.username);
                     
@@ -28,7 +28,7 @@ function PlannerSearch() {
             }
             ).then(() => {
                 setUser(newUsers);
-                console.log("the user", newUsers);
+                // console.log("the user", newUsers);
             })
             .catch(err => console.log(err));
     };

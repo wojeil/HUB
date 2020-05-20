@@ -4,14 +4,14 @@ import AdminDashBoard from "../../components/AdminDashBoard";
 
 function AdminPage() {
     const [user, dispatch] = useContext(UserContext)
-	console.log(user)
+	// console.log(user)
 
 	useEffect(() => {
 		fetch('api/users/user', {
 			credentials: 'include'
 		})
 			.then((res) => {
-				console.log(`response to authenticate ${res}`);
+				// console.log(`response to authenticate ${res}`);
 				return res.json(res)
 
 			})

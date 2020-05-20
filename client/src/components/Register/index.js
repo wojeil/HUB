@@ -60,7 +60,7 @@ function Register() {
 							if (response.status === 200) { //All good
 								Auth.authenticate(() => { //Update the boolean and take off the cuffs
 									// setRedirectToReferrer(true)
-									console.log(`Response in login ${JSON.stringify(response)}`);
+									// console.log(`Response in login ${JSON.stringify(response)}`);
 									if(!Auth.isAdmin){
 									history.push("/protected")
 									} else{

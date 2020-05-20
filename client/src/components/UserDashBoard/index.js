@@ -16,9 +16,9 @@ function UserDashBoard (){
         
         API.getAnnouncements()
         .then(res =>{
-            console.log(res)
+            // console.log(res)
             setAnnouncements(res.data.items)
-            console.log("userdash" , res.data)
+            // console.log("userdash" , res.data)
         }
             )
             .catch(err => console.log(err));

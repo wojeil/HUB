@@ -16,10 +16,10 @@ function Planner() {
         API.getPlan()
             .then(res => {
                 setPlan(res.data[0].schedule);
-                console.log("userplan", res.data);
+                // console.log("userplan", res.data);
             }
             ).then(() => {
-                console.log("the schedule", plans);
+                // console.log("the schedule", plans);
             })
             .catch(err => console.log(err));
     };

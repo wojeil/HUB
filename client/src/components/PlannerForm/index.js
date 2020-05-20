@@ -15,13 +15,13 @@ function PlannerForm({loadPlans,update}) {
 
     const handleSubmit=(e) =>{
         e.preventDefault();
-        console.log(update)
-        console.log(parseInt(timeRef.current.value))
+        // console.log(update)
+        // console.log(parseInt(timeRef.current.value))
         const updatedplan = update[parseInt(timeRef.current.value)]
         updatedplan.splice(dayRef.current.value, 1,planRef.current.value)
         const sendPlans= update
         sendPlans.splice(timeRef.current.value, 1 , updatedplan)
-        console.log(sendPlans)
+        // console.log(sendPlans)
         API.updatePlan(sendPlans)
         .then (res=> console.log(res))
         //.then (postPlan(res))

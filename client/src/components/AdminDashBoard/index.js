@@ -17,9 +17,9 @@ function AdminDashBoard() {
 
         API.getAnnouncements()
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 setAnnouncements(res.data.items)
-                console.log("userdash", res.data)
+                // console.log("userdash", res.data)
             }
             )
             .catch(err => console.log(err));
@@ -36,8 +36,8 @@ function AdminDashBoard() {
             return longAnnouncements.type ==="Long-Term";
         }
     );
-    console.log(filterShortAn);
-    console.log(filterLongAn);
+    // console.log(filterShortAn);
+    // console.log(filterLongAn);
 
     return (
         <div className="admin" id="dashBoard">
