@@ -48,22 +48,30 @@ function Nav() {
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/protected">DashBoard</Link>
+              <Link style={buttonStyle} className="nav-link" to="/protected">DashBoard</Link>
             }
+          </li>
+          <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/planner-search">{user.username}'s TEAM</Link>
+              <Link style={buttonStyle} className="nav-link" to="/planner-search">{user.username}'s TEAM</Link>
             }
-
+          </li>
+          <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/planner">Your Planner</Link>
+              <Link style={buttonStyle} className="nav-link" to="/planner">Your Planner</Link>
             }
-            {user.role === "Admin" ? <Link style={buttonStyle} className="btn btn-light" to="/admin-dash">Edit DashBoard</Link> : ""
+          </li>
+          <li className="nav-item ">
+            {user.role === "Admin" ? <Link style={buttonStyle} className="nav-link" to="/admin-dash">Edit DashBoard</Link> : ""
 
             }
-
+          </li>
+          <li className="nav-item ">
             {user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/register">Register a New User</Link>
+              <Link style={buttonStyle} className="nav-link" to="/register">Register a New User</Link>
             }
+            </li>
+            <li className="nav-item ">
             <AuthButton />
           </li>
 
