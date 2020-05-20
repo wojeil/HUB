@@ -11,7 +11,7 @@ function PublicRoute() {
     return (
         <>
         <div className="jumbotron jumbotron-fluid">
-            <div className="container-fluid" >
+            <div className="container-fluid" id="logindiv" >
                 <h1 className="display-4">Welcome to The HUB</h1>
                 <p className="lead">A Home that keeps you connected.</p>
             </div>
