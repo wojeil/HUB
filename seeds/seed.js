@@ -37,7 +37,7 @@ const adminSeed = [
     username: "exampleAdmin",
     password: "test",
     role: "Admin",
-    manager: uniqid()
+    manager: "adminTest"
   }
 ];
 
