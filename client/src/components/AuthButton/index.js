@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import Auth from "../../utils/Auth";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../utils/UserContext";
-import "./style.css"
+
 
 const AuthButton = () => {
 	console.log("NAV", Auth.isAuthenticated);
@@ -24,13 +24,13 @@ const AuthButton = () => {
 
 					})
 				}}>
-				Logout
+				<span id="red">Logout</span>
 			</Link>
 		) : (
 				<Link
 					className="nav-link"
 					to="/login"
-				>Login
+				><span id="blue">Login</span>
 				</Link>
 			)
 	)
