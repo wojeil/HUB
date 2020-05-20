@@ -6,23 +6,33 @@
         position:fixed;
         padding:0;
         margin:0;
-    
-        
         left:0;
     
         width: 100%;
         height: 55%;
+        -webkit-transform: scaleX(-1);
+       transform: scaleX(-1);
+        
 }
 
 .display-4 {
         font-weight: bolder;
-        color: white;
+        color:black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .lead {
-        color: white;
-        font-weight: bold;
+        color: black;
+        font-weight: bolder;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .about {
         margin-top: 500px;
+}
+
+#logindiv {
+        margin-top: 100px;
+        margin-left: -100px;
+        -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
