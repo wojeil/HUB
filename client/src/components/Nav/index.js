@@ -4,6 +4,7 @@ import "./style.css";
 // import Login from "../LoginForm";
 import AuthButton from "../AuthButton";
 import { UserContext } from "../../utils/UserContext";
+
 //I want to add some basic inline styling here, even though we are bringing in styles
 const buttonStyle = {
   marginRight: 10
@@ -23,6 +24,8 @@ function Nav() {
     setWidth(window.innerWidth)
   };
 
+
+
   // const toggleNav = () => {
   //   setOpen(!open);
   // };
@@ -41,29 +44,37 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
       <Link className="navbar-brand" to="/">
-        The HUB
+      <span id="white">The HUB </span>
         </Link>
       <div className={`${open ? "" : "collapse "}navbar-collapse`} id="navbarNav">
-        {user.username ? <span className="userText text-white ml-3 pt-1" to="#">Hi {user.username} !</span> : ""}
+        {user.username ? <span id="username" className="userText ml-3 pt-1" to="#">Hi {user.username} !</span> : ""}
         <ul className="navbar-nav ml-auto">
           <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/protected">DashBoard</Link>
+              <Link style={buttonStyle} className="nav-link" to="/protected"><span id="white">DashBoard</span></Link>
             }
+          </li>
+          <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/planner-search">{user.username}'s TEAM</Link>
+              <Link style={buttonStyle} className="nav-link" to="/planner-search"><span id="white">{user.username}'s TEAM</span></Link>
             }
-
+          </li>
+          <li className="nav-item ">
             {!user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/planner">Your Planner</Link>
+              <Link style={buttonStyle} className="nav-link" to="/planner"><span id="white">Your Planner</span></Link>
             }
-            {user.role === "Admin" ? <Link style={buttonStyle} className="btn btn-light" to="/admin-dash">Edit DashBoard</Link> : ""
+          </li>
+          <li className="nav-item ">
+            {user.role === "Admin" ? <Link style={buttonStyle} className="nav-link" to="/admin-dash"><span id="white">Edit DashBoard</span></Link> : ""
 
             }
-
+          </li>
+          <li className="nav-item ">
             {user.username ? "" :
-              <Link style={buttonStyle} className="btn btn-light" to="/register">Register a New User</Link>
+              <Link style={buttonStyle} className="nav-link" to="/register"><span id="white">Register a New User</span></Link>
             }
+            </li>
+            <li className="nav-item ">
             <AuthButton />
           </li>
 

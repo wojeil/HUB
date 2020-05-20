@@ -41,6 +41,7 @@ function UserDashBoard (){
         <div className="user" id="dashBoard">
         <Row>
             <Col size="sm-6">
+            <h1>Short-Term</h1>
                 <div id="shortTerm">
                     {announcements.length=== 0 ? "" : filterShortAn.map((announcement, i) => {
                         return (
@@ -52,6 +53,7 @@ function UserDashBoard (){
             </Col>
 
             <Col size="sm-6">
+            <h1>Long-Term</h1>
                 <div id="longTerm">
                     {announcements.length=== 0 ? "" : filterLongAn.map((announcement,i) => {
                         return (

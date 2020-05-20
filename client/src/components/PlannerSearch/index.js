@@ -10,6 +10,7 @@ function PlannerSearch() {
 
     const [users, setUser] = useState("")
     const [planners, setPlanner] =useState("")
+    const [userNames, setUserName] =useState("")
   
 
     useEffect(() => {
@@ -44,7 +45,8 @@ function PlannerSearch() {
     API.getUserzPlanner(e.target.value )
     .then(res => {
         setPlanner(res.data.schedule);
-        // console.log("userzplan", res.data.schedule);
+        setUserName(res.data.owner);
+        console.log("userzplan", res.data.owner);
     }
     ).then(() => {
          console.log("the selected schedule", planners);
@@ -58,7 +60,7 @@ function PlannerSearch() {
     return (
 
         <Container>
-            <TeamMates planners={planners} />
+            <TeamMates planners={planners} userNames={userNames}/>
             <Card title="Find Your TeamMate's Planner">
                 <form>
                     <div className="form-group">

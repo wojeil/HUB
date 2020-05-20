@@ -1,6 +1,7 @@
 import React from 'react';
 import "./mylogin.css";
 import Card from "../../components/Card";
+import {Container} from "../../components/Grid"
 
 
 
@@ -16,7 +17,7 @@ function PublicRoute() {
                 <p className="lead">A Home that keeps you connected.</p>
             </div>
         </div>
-
+       <Container>
         <div className="about" id="homeContainer">
             <div className="row" id="homerow">
                 <div className="col">
@@ -29,6 +30,7 @@ function PublicRoute() {
 
             </div>
         </div>
+        </Container>
         </>
     )
 }

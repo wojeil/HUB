@@ -2,14 +2,19 @@ import React from "react";
 
 
 
-function TeamMates ({planners}){
-    
+function TeamMates ({planners,userNames}){
+   
     return(
         <>
         
         <table className="table table-striped table-dark">
-            <thead>
-                <tr>
+         <thead>
+                    <tr><th > 
+                            {!userNames ? "" :   <span className="userNames"> {userNames} </span>}
+                         
+                 
+                  </th></tr>
+                <tr> 
                     <th scope="col">Hours</th>
                     <th scope="col">Monday</th>
                     <th scope="col">Tuesday</th>

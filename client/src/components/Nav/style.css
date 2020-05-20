@@ -2,3 +2,42 @@
   border-radius: 0;
   
 }
+#username{
+  color:rgb(0, 186, 192);
+  font-weight: bolder;
+  
+} 
+
+span#username:hover {
+  font-weight: bolder;
+}
+
+span#white:hover {
+  border-left: 3px solid gray;
+  padding-left: 10px;
+  border-right: 3px solid gray;
+  padding-right: 10px;
+  color: white;
+  font-weight: bolder;
+  
+}
+
+span#blue:hover{
+  border-left: 3px solid gray;
+  padding-left: 10px;
+  border-right: 3px solid gray;
+  padding-right: 10px;
+  color:rgb(0, 186, 192);
+  font-weight: bolder;
+ 
+}
+
+span#red:hover{
+  border-left: 3px solid gray;
+  padding-left: 5px;
+  border-right: 3px solid gray;
+  padding-right: 5px;
+  color:rgb(255, 0, 119);
+  font-weight: bolder;
+  
+}

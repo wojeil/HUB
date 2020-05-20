@@ -29,11 +29,14 @@ function RegisterForm({ onRegister }) {
 				}}
 			>
 				<div className="form-group">
+					<label>Username:</label>	
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
+					<label>Password:</label>
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
+					<label>Manager Username:</label>
 					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's username or current username if admin" /><br/>
 					
-					
+					<label>Role:</label>
 					<select className="custom-select" ref={permissionsRef}>
 						<option  defaultValue >{Roles.User}</option>
 						<option>{Roles.Admin}</option>
