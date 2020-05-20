@@ -42,8 +42,8 @@ function PlannerSearch() {
         console.log(e.target,"it clicks")
     API.getUserzPlanner(e.target.value )
     .then(res => {
-        setPlanner(res.data);
-        console.log("userzplan", res);
+        setPlanner(res.data.schedule);
+        console.log("userzplan", res.data.schedule);
     }
     ).then(() => {
         console.log("the selected schedule", planners);
@@ -57,7 +57,7 @@ function PlannerSearch() {
     return (
 
         <Container>
-            <TeamMates />
+            <TeamMates planners={planners} />
             <Card title="Find Your TeamMate's Planner">
                 <form>
                     <div className="form-group">
