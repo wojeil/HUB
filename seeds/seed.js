@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Dashboard = require("../models/dashboard");
-
+const Account = require("../models/account");
+const uniqid = require('uniqid');
 
 mongoose.connect(
   process.env.MONGODB_URI ||
@@ -21,14 +22,40 @@ const dashSeed = [
             body:"This is the Annoucement"
         }
     ],
-    owner: "admin",
+    owner: "RWS",
     lastUpdate: Date.now()
+  }
+];
+const adminSeed = [
+  {
+    username: "RWS",
+    password: "Devlop2020",
+    role: "Admin",
+    manager: uniqid()
+  },
+  {
+    username: "exampleAdmin",
+    password: "test",
+    role: "Admin",
+    manager: uniqid()
   }
 ];
 
 Dashboard
   .remove({})
   .then(() => Dashboard.collection.insertMany(dashSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  Account
+  .remove({})
+  .then(() => Account.collection.insertMany(adminSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
