@@ -19,7 +19,7 @@ function RegisterForm({ onRegister }) {
 				ref={formRef}
 				onSubmit={(e) => {
 					e.preventDefault();
-					console.log(permissionsRef.current.value)
+					// console.log(permissionsRef.current.value)
 					return onRegister({
 						username: userNameRef.current.value,
 						password: passwordRef.current.value,
