@@ -24,7 +24,7 @@ const dashSeed = [
     ],
     owner: "RWS",
     lastUpdate: Date.now()
-  }
+  },
   {
     items: [
         {
