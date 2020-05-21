@@ -25,6 +25,22 @@ const dashSeed = [
     owner: "RWS",
     lastUpdate: Date.now()
   }
+  {
+    items: [
+        {
+            title: "Update the DB",
+            type:"short-term",
+            body:"Connect to MongoDB and make a user an Admin"
+        },
+        {
+            title: "New Announcement2",
+            type:"long-term",
+            body:"This is the Annoucement"
+        }
+    ],
+    owner: "adminTest",
+    lastUpdate: Date.now()
+  }
 ];
 const adminSeed = [
   {
