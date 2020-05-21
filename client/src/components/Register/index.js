@@ -12,21 +12,21 @@ function Register() {
 	let history = useHistory();
 
 	const register = (data) => {
-		//create a new dash document if the user is an admin
-		if(data.role === "Admin"){
-			fetch("api/dash/post", {
-				method: "POST",
-				body: JSON.stringify(data),
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				credentials: 'include'
-			}).then(res => {
-				if(res.status === 200){
-					console.log(`New Dash Created For ${data.username}`)
-				}
-			})
-		};
+		// //create a new dash document if the user is an admin
+		// if(data.role === "Admin"){
+		// 	fetch("api/dash/post", {
+		// 		method: "POST",
+		// 		body: JSON.stringify(data),
+		// 		headers: {
+		// 			'Content-Type': 'application/json'
+		// 		},
+		// 		credentials: 'include'
+		// 	}).then(res => {
+		// 		if(res.status === 200){
+		// 			console.log(`New Dash Created For ${data.username}`)
+		// 		}
+		// 	})
+		// };
 		fetch("api/plan/post", {
 			method: "POST",
 			body: JSON.stringify(data),
@@ -36,7 +36,7 @@ function Register() {
 			credentials: 'include'
 		}).then(res => {
 			console.log("Empty Plan Created");
-		})
+		});
 		
 		fetch('api/users/register', {
 			method: 'POST',
@@ -63,7 +63,7 @@ function Register() {
 							if (response.status === 200) { //All good
 								Auth.authenticate(() => { //Update the boolean and take off the cuffs
 									// setRedirectToReferrer(true)
-									console.log(`Response in login ${JSON.stringify(response)}`);
+									// console.log(`Response in login ${JSON.stringify(response)}`);
 									if(!Auth.isAdmin){
 									history.push("/protected")
 									} else{

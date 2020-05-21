@@ -29,7 +29,7 @@ function Nav() {
   // const toggleNav = () => {
   //   setOpen(!open);
   // };
-  console.log(user);
+  // console.log(user);
 
   useEffect(() => {
 

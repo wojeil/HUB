@@ -28,23 +28,29 @@ module.exports = {
 	register: function (req, res, next) {
 		console.log('/register handler', req.body);
 		const user = new Account({ username: req.body.username, role:req.body.role, manager:req.body.manager})
-		Account.register(user, req.body.password, (err, account) => {
-			if (err) {
-				return res.status(500).send({ error: err.message });
-			}
-
-			passport.authenticate('local')(req, res, () => {
-				req.session.save((err) => {
+		Account.findOne({role:"Admin", manager: req.body.manager}).then(found =>{
+			if(found){
+				Account.register(user, req.body.password, (err, account) => {
 					if (err) {
-						//ToDo:log the error and look for an existing user
-
-						return next(err);
+						return res.status(500).send({ error: err.message });
 					}
-
-					res.send(200, "successful register");
+		
+					passport.authenticate('local')(req, res, () => {
+						req.session.save((err) => {
+							if (err) {
+								//ToDo:log the error and look for an existing user
+		
+								return next(err);
+							}
+		
+							res.send(200, "successful register");
+						});
+					});
 				});
-			});
-		});
+			}else{
+				return res.status(404).send("Incorrect Manager Password!");
+			}
+		})
 	},
 	login: function (req, res, next) {
 		console.log('/login handler');
