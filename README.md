@@ -1,9 +1,13 @@
-# Burgermaker
+# The HUB
 Project Title
-This is a burger maker application that can add any burger of your choosing and then gives the option to devour
-it and place it on its own list. This way you can keep track of the burgers you would like to eat some day and can
-mark off the ones you do end up eating! JS, handlebars, controllers, database were all used in making
-of this project
+This is a planner application where the team lead/manager and the users can mutally benefit from.
+This application is used to organize team planning and can used from a professional setting to just
+a at home start up with friends. The application will have to 2 different users that will have access
+to different dashboard given the position. In the dashboard the users will be able to see what the admin
+has for announcements/goals for the day. The next page is the planner page where you will see a dynamic
+calender and a planner where the user will be able to create tasks they need to do. This project is a
+full stack project and used react front end and MongoDB to save in the back end. This project also
+has full authentication using passport
 
 Getting Started
 You can get a verison of this product up and running through heroku and can see the juicy backend code through the github
@@ -11,24 +15,31 @@ page.
 
 Prerequisites
 Install
--Express
--Express-handlebars
--mysql
+-Date-fns
+-mongoose
+-passport
+-axios
+-express
+-morgan
+-react
+-react-dom
 
 
 Deployment
-Heroky
+Heroku
 
 Built With
 React
-MongoDB
+Mongoose
 Date-fns
 
 Contributing
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
 Authors
-Steven Leonardo - Initial work
+Steven Leonardo - Front End
+Wadih Ojeil- Project lead
+Rogelio Martinez- Back End 
 
 License
 This project is licensed under the MIT License
