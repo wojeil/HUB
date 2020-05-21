@@ -1,4 +1,54 @@
-# M.E.R.N. Authentication Boilerplate
+# The HUB
+
+<img src= (https://user-images.githubusercontent.com/60321934/82580850-bfc76100-9b5d-11ea-9ad8-3bb3a71708f5.png) width="100" height="100">
+
+
+
+
+Project Title
+This is a planner application where the team lead/manager and the users can mutally benefit from.
+This application is used to organize team planning and can used from a professional setting to just
+a at home start up with friends. The application will have to 2 different users that will have access
+to different dashboard given the position. In the dashboard the users will be able to see what the admin
+has for announcements/goals for the day. The next page is the planner page where you will see a dynamic
+calender and a planner where the user will be able to create tasks they need to do. This project is a
+full stack project and used react front end and MongoDB to save in the back end. This project also
+has full authentication using passport
+
+Getting Started
+You can get a verison of this product up and running through heroku and can see the juicy backend code through the github
+page.
+
+Prerequisites
+Install
+-Date-fns
+-mongoose
+-passport
+-axios
+-express
+-morgan
+-react
+-react-dom
+
+
+Deployment
+Heroku
+
+Built With
+React
+Mongoose
+Date-fns
+
+Contributing
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+Authors
+Steven Leonardo - Front End
+Wadih Ojeil- Project lead
+Rogelio Martinez- Back End
+
+License
+This project is licensed under the MIT License
 Full Stack Project starter with basic components routes and authentication. The project is in MVC format that includes the User model and controller. The first routes in the client are protected by the passport authentication using the local strategy. 
 
 ## Purpose and Inspiration

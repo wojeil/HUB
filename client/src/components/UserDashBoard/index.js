@@ -39,6 +39,7 @@ function UserDashBoard (){
 
     return(
         <div className="user" id="dashBoard">
+            <div className="user2">
         <Row>
             <Col size="sm-6">
             <h1>Short-Term</h1>
@@ -64,6 +65,7 @@ function UserDashBoard (){
 
             </Col>
         </Row>
+        </div>
         </div>
     );
 }

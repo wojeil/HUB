@@ -68,7 +68,7 @@ function PlannerForm({loadPlans,update}) {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <label for="exampleFormControlTextarea1">Task:</label>
                     <textarea ref={planRef} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <FormButton />

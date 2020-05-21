@@ -4,7 +4,8 @@
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        position: absolute;
+        position: fixed;
+        overflow: auto;
         padding:0;
         margin:0;
     
