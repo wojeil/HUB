@@ -33,18 +33,18 @@ function AdminDashBoardForm({loadAnnouncements}) {
             
         >
             <div className="form-group">
-                <label for="exampleFormControlInput1">Title</label>
+                <label for="exampleFormControlInput1">Title:</label>
                 <input ref={titleRef} type="text" className="form-control" id="exampleFormControlInput1" placeholder="Title" />
             </div>
             <div className="form-group">
-                <label for="exampleFormControlSelect1">Example select</label>
+                <label for="exampleFormControlSelect1">Goal Type:</label>
                 <select ref={typeRef} className="form-control" id="exampleFormControlSelect1">
                     <option>Short-Term</option>
                     <option>Long-Term</option>
                 </select>
             </div>
             <div className="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <label for="exampleFormControlTextarea1">Team Goal:</label>
                 <textarea ref={bodyRef} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <FormButton />

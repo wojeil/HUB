@@ -64,7 +64,7 @@ function PlannerSearch() {
             <Card title="Find Your TeamMate's Planner">
                 <form>
                     <div className="form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
+                        <label for="exampleFormControlSelect1">Team Members:</label>
                         <select className="form-control" id="exampleFormControlSelect1" onClick={handleClick}>
                             {!users ? "" : users.map((user, i) => {
                                 return (
