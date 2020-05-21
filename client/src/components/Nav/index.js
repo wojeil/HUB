@@ -71,7 +71,7 @@ function Nav() {
           </li>
           <li className="nav-item ">
             {user.username ? "" :
-              <Link style={buttonStyle} className="nav-link" to="/register"><span id="white">Register a New User</span></Link>
+              <Link style={buttonStyle} className="nav-link" to="/register"><span id="blue">Register a New User</span></Link>
             }
             </li>
             <li className="nav-item ">
