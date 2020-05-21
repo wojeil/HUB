@@ -2,6 +2,9 @@ import React from 'react';
 import RegisterForm from "../RegisterForm";
 import { useHistory } from "react-router";
 import Auth from "../../utils/Auth";
+import styles from "./mystyle.module.css"
+import Nav from "../Nav/index"
+
 //The component for doing the actual signup of the User
 
 function Register() {
@@ -80,7 +83,8 @@ function Register() {
 	}
 
 	return (
-		<div>
+		<div className={styles.bigpurple}>
+			<Nav/>
 			<RegisterForm onRegister={register} />
 		</div>
 	)

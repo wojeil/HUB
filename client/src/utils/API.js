@@ -42,8 +42,8 @@ export default {
     return axios.get("api/search/team",data)
   },
 
-  getUserzPlanner: function (){
-    return axios.get("api/search/:user")
+  getUserzPlanner: function (user){
+    return axios.get("api/search/"+user)
   }
 };
 

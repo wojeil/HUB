@@ -24,7 +24,7 @@ function AdminDashBoardForm({loadAnnouncements}) {
    
     
     return (
-        <Card title="Place An Announcement In Your Dashboard">
+        <Card title="Set a Goal for Your Team">
         <form
             ref={dashFormRef}
             onSubmit={handleSubmit}

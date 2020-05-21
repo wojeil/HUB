@@ -5,16 +5,19 @@ import TeamMates from "../TeamMates"
 import API from "../../utils/API"
 
 
+
 function PlannerSearch() {
 
     const [users, setUser] = useState("")
-
+    const [planners, setPlanner] =useState("")
+    const [userNames, setUserName] =useState("")
+  
 
     useEffect(() => {
-        loadPlans();
+        loadUsers();
     }, [])
 
-    function loadPlans() {
+    function loadUsers() {
         const newUsers =[]
         
         API.getUser()
@@ -33,18 +36,39 @@ function PlannerSearch() {
             .catch(err => console.log(err));
     };
 
+  
+    
+  
+    function handleClick (e){
+        e.preventDefault();
+        // console.log(e.target,"it clicks")
+    API.getUserzPlanner(e.target.value )
+    .then(res => {
+        setPlanner(res.data.schedule);
+        setUserName(res.data.owner);
+        console.log("userzplan", res.data.owner);
+    }
+    ).then(() => {
+         console.log("the selected schedule", planners);
+    })
+    .catch(err => console.log(err));
+ };
+
+ 
+
+
     return (
 
         <Container>
-            <TeamMates />
+            <TeamMates planners={planners} userNames={userNames}/>
             <Card title="Find Your TeamMate's Planner">
                 <form>
                     <div className="form-group">
                         <label for="exampleFormControlSelect1">Example select</label>
-                        <select className="form-control" id="exampleFormControlSelect1">
+                        <select className="form-control" id="exampleFormControlSelect1" onClick={handleClick}>
                             {!users ? "" : users.map((user, i) => {
                                 return (
-                                    <option key={i} >{user}</option>
+                                    <option value={user} key={i} >{user}</option>
                                 )
                             })}
                         </select>

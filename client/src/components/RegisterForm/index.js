@@ -29,8 +29,11 @@ function RegisterForm({ onRegister }) {
 				}}
 			>
 				<div className="form-group">
+					<label>Username:</label>	
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
+					<label>Password:</label>
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
+          <label>Manager Password:</label>
 					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's password" /><br/>
 					
 					

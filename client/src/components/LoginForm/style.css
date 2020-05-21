@@ -1,0 +1,13 @@
+/* span#green:hover{
+    border-left: 3px solid gray;
+    padding-left: 5px;
+    border-right: 3px solid gray;
+    padding-right: 5px;
+    color:rgb(0, 255, 21);
+    font-weight: bolder;
+    
+  } */
+
+  #logInBtn{
+    color:rgb(0, 255, 21);
+  }

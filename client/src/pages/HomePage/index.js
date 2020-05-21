@@ -1,6 +1,8 @@
 import React from 'react';
 import "./mylogin.css";
 import Card from "../../components/Card";
+import {Container} from "../../components/Grid"
+
 
 
 /* This is a very simple component.. it probably doesn't need to be a smart component at this point but you never know what's goingto happen in the future */
@@ -10,12 +12,12 @@ function PublicRoute() {
     return (
         <>
         <div className="jumbotron jumbotron-fluid">
-            <div className="container-fluid" >
+            <div className="container-fluid" id="logindiv" >
                 <h1 className="display-4">Welcome to The HUB</h1>
-                <p className="lead">A Home that keeps you connected.</p>
+                <p className="lead">A Home That Keeps You Connected.</p>
             </div>
         </div>
-
+       <Container>
         <div className="about" id="homeContainer">
             <div className="row" id="homerow">
                 <div className="col">
@@ -28,6 +30,7 @@ function PublicRoute() {
 
             </div>
         </div>
+        </Container>
         </>
     )
 }
