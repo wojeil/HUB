@@ -1,4 +1,9 @@
 # The HUB
+
+![Home HUB](C:\Users\steve\OneDrive\Documents\UCF\HW2\WorkingHUB\client\src\images\homepage.png)
+
+
+
 Project Title
 This is a planner application where the team lead/manager and the users can mutally benefit from.
 This application is used to organize team planning and can used from a professional setting to just
