@@ -1,6 +1,7 @@
 # The HUB
 
-![Home HUB](C:\Users\steve\OneDrive\Documents\UCF\HW2\WorkingHUB\client\src\images\homepage.png)
+<img src= (https://user-images.githubusercontent.com/60321934/82580850-bfc76100-9b5d-11ea-9ad8-3bb3a71708f5.png) width="100" height="100">
+
 
 
 
