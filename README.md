@@ -45,7 +45,7 @@ Please read CONTRIBUTING.md for details on our code of conduct, and the process 
 Authors
 Steven Leonardo - Front End
 Wadih Ojeil- Project lead
-Rogelio Martinez- Back End 
+Rogelio Martinez- Back End
 
 License
 This project is licensed under the MIT License

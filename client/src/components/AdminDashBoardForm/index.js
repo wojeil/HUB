@@ -2,6 +2,7 @@ import React, {useRef} from "react";
 import API from "../../utils/API";
 import FormButton from "../FormSubmitButton";
 import Card from "../Card";
+import "./style.css"
 
 
 function AdminDashBoardForm({loadAnnouncements}) {
@@ -24,6 +25,7 @@ function AdminDashBoardForm({loadAnnouncements}) {
    
     
     return (
+        <div className="dashform">
         <Card title="Set a Goal for Your Team">
         <form
             ref={dashFormRef}
@@ -48,6 +50,7 @@ function AdminDashBoardForm({loadAnnouncements}) {
             <FormButton />
         </form>
         </Card>
+        </div>
 
     );
 
