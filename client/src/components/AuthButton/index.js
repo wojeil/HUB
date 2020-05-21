@@ -30,7 +30,7 @@ const AuthButton = () => {
 				<Link
 					className="nav-link"
 					to="/login"
-				><span id="blue">Login</span>
+				><span id="green">Login</span>
 				</Link>
 			)
 	)
