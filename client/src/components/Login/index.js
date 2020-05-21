@@ -12,13 +12,13 @@ function Login() {
 
 	useEffect(() => {
 		let from;
-		console.log(location)
+		// console.log(location)
 		if (!Auth.isAdmin) {
 			from = location.state || { from: { pathname: '/protected' } }
 		} else {
 			from = location.state || { from: { pathname: '/admin-dash' } }
 		}
-		console.log(from)
+		// console.log(from)
 		if (redirectToReferrer) {
 			history.push(from.from.pathname)
 		}

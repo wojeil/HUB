@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Announcements from "../Announcement"
 import API from "../../utils/API"
 import AdminDashBoardForm from "../AdminDashBoardForm"
-import { Row, Col } from "../Grid"
+import {  Row, Col } from "../Grid"
 import "./style.css"
 function AdminDashBoard() {
 
@@ -17,9 +17,9 @@ function AdminDashBoard() {
 
         API.getAnnouncements()
             .then(res => {
-                console.log(res)
+                // console.log(res)
                 setAnnouncements(res.data.items)
-                console.log("userdash", res.data)
+                // console.log("userdash", res.data)
             }
             )
             .catch(err => console.log(err));
@@ -36,13 +36,14 @@ function AdminDashBoard() {
             return longAnnouncements.type ==="Long-Term";
         }
     );
-    console.log(filterShortAn);
-    console.log(filterLongAn);
+    // console.log(filterShortAn);
+    // console.log(filterLongAn);
 
     return (
         <div className="admin" id="dashBoard">
             <Row>
                 <Col size="sm-6">
+                    <h1>Short-Term</h1>
                     <div id="shortTerm">
                         {announcements.length=== 0 ? "" : filterShortAn.map((announcement, i) => {
                             return (
@@ -54,6 +55,7 @@ function AdminDashBoard() {
                 </Col>
 
                 <Col size="sm-6">
+                <h1>Long-Term</h1>
                     <div id="longTerm">
                         {announcements.length=== 0 ? "" : filterLongAn.map((announcement,i) => {
                             return (
@@ -66,8 +68,10 @@ function AdminDashBoard() {
             </Row>
             <hr />
             <Row>
-                <Col size="sm-12">
+                <Col size="sm-4">
+                    
                     <AdminDashBoardForm loadAnnouncements={loadAnnouncements} />
+                    
                 </Col>
             </Row>
         </div>

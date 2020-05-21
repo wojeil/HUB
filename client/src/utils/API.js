@@ -38,12 +38,12 @@ export default {
    /////////////////////////////////////////////////////////////
   //below contains requests for plannerSearch
 
-  getUser: function (){
-    return axios.get("api/search/team")
+  getUser: function (data){
+    return axios.get("api/search/team",data)
   },
 
-  getUserzPlanner: function (){
-    return axios.get("api/search/:user")
+  getUserzPlanner: function (user){
+    return axios.get("api/search/"+user)
   }
 };
 

@@ -9,7 +9,7 @@ function RegisterForm({ onRegister }) {
 	const formRef = useRef();
 	const userNameRef = useRef();
 	const passwordRef = useRef();
-	const permissionsRef = useRef();
+	// const permissionsRef = useRef();
 	const managerRef = useRef();
 
 	return (
@@ -19,25 +19,28 @@ function RegisterForm({ onRegister }) {
 				ref={formRef}
 				onSubmit={(e) => {
 					e.preventDefault();
-					console.log(permissionsRef.current.value)
+					// console.log(permissionsRef.current.value)
 					return onRegister({
 						username: userNameRef.current.value,
 						password: passwordRef.current.value,
-						role: permissionsRef.current.value,
+						role: Roles.User,
 						manager: managerRef.current.value
 					});
 				}}
 			>
 				<div className="form-group">
+					<label>Username:</label>	
 					<input className="form-control" ref={userNameRef} type='text' name="username" placeholder='Enter Username' /><br />
+					<label>Password:</label>
 					<input className="form-control" ref={passwordRef} type='password' name="password" placeholder='Password' /><br />
-					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's username or current username if admin" /><br/>
+          <label>Manager Password:</label>
+					<input className="form-control" ref={managerRef} type="text" name="manager" placeholder="Your manager's password" /><br/>
 					
 					
-					<select className="custom-select" ref={permissionsRef}>
+					{/* <select className="custom-select" ref={permissionsRef}>
 						<option  defaultValue >{Roles.User}</option>
 						<option>{Roles.Admin}</option>
-					</select>
+					</select> */}
 					
 				</div>
 				<button className="btn btn btn-primary" type='submit'>Submit</button>

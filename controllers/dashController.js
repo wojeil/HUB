@@ -29,7 +29,7 @@ module.exports = {
     addDash: function (req, res) {
         const { user } = req.session.passport
         Account.findOne({ username: user }).then(userData => {
-            Dashboard.findOneAndUpdate({ owner: user }, { lastUpdated: Date.now(), $push: { items: req.body } }, (err, data) => {
+            Dashboard.findOneAndUpdate({ owner: userData.manager }, { lastUpdated: Date.now(), $push: { items: req.body } }, (err, data) => {
                 if (err) throw err;
                 res.status(200);
             })
@@ -39,7 +39,7 @@ module.exports = {
     removeDash: function (req, res) {
         const { user } = req.session.passport
         Account.findOne({ username: user }).then(userData => {
-            Dashboard.findOneAndUpdate({ owner: user }, { lastUpdated: Date.now(), $pull: { "items":{title:req.body.title }  } }, (err, data) => {
+            Dashboard.findOneAndUpdate({ owner: userData.manager }, { lastUpdated: Date.now(), $pull: { "items":{title:req.body.title }  } }, (err, data) => {
                 if (err) throw err;
                 res.status(200);
             })
