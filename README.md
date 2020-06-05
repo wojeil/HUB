@@ -1,19 +1,19 @@
 # The HUB
 
-<img src= (https://user-images.githubusercontent.com/60321934/82580850-bfc76100-9b5d-11ea-9ad8-3bb3a71708f5.png) width="100" height="100">
+<img src= "./client/public/appImage.png" width="350" height="200">
 
 
 
 
 Project Title
 This is a planner application where the team lead/manager and the users can mutally benefit from.
-This application is used to organize team planning and can used from a professional setting to just
-a at home start up with friends. The application will have to 2 different users that will have access
-to different dashboard given the position. In the dashboard the users will be able to see what the admin
-has for announcements/goals for the day. The next page is the planner page where you will see a dynamic
+This application is used to organize team planning and can be used from a professional setting to just
+a at home start up with friends. The application will have to two different users that will have access
+to different dashboards given the position. In the dashboard the users will be able to see what the admin
+has listed as announcements/goals for the day. The next page is the planner page where user will see a dynamic
 calender and a planner where the user will be able to create tasks they need to do. This project is a
-full stack project and used react front end and MongoDB to save in the back end. This project also
-has full authentication using passport
+full stack MERN project and runs on react front end and MongoDB to save in the back end. This project also
+has full authentication using passport.
 
 Getting Started
 You can get a verison of this product up and running through heroku and can see the juicy backend code through the github
@@ -33,6 +33,11 @@ Install
 
 Deployment
 Heroku
+
+Try Me Live
+<a href="https://gentle-sea-35926.herokuapp.com/">https://gentle-sea-35926.herokuapp.com/</a>
+Login as admin= RWS
+Password= test
 
 Built With
 React
