@@ -14,7 +14,7 @@ import UserPage from "./pages/UserPage";
 import AdminPage from "./pages/AdminPage";
 import PlannerPage from "./pages/PlannerPage";
 import PlannerSearchPage from "./pages/PlannerSearchPage";
-import GroupChat from "";
+import GroupChat from "./components/Chat/GroupChat";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 

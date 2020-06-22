@@ -9,11 +9,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const flash = require('connect-flash');
 const routes = require('./routes/index');
-var WebSocketServer = require('websocket').server;
-var WebSocketClient = require('websocket').client;
-var WebSocketFrame  = require('websocket').frame;
-var WebSocketRouter = require('websocket').router;
-var W3CWebSocket = require('websocket').w3cwebsocket;
+const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({ port: 3030 });
 
