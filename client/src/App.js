@@ -14,6 +14,7 @@ import UserPage from "./pages/UserPage";
 import AdminPage from "./pages/AdminPage";
 import PlannerPage from "./pages/PlannerPage";
 import PlannerSearchPage from "./pages/PlannerSearchPage";
+import Chat from "./pages/Chat";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 
@@ -28,6 +29,7 @@ const AuthExample = () => (
 						<Route exact path="/" component={HomePage} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/register" component={Register} />
+						<PrivateRoute exact path="/chat" component={Chat} />
 						<PrivateRoute exact path="/protected" component={UserPage} />
 						<PrivateRoute exact path="/planner" component={PlannerPage} />
 						<PrivateRoute exact path="/planner-search" component={PlannerSearchPage} />
