@@ -14,6 +14,18 @@ var WebSocketClient = require('websocket').client;
 var WebSocketFrame  = require('websocket').frame;
 var WebSocketRouter = require('websocket').router;
 var W3CWebSocket = require('websocket').w3cwebsocket;
+
+const wss = new WebSocket.Server({ port: 3030 });
+
+wss.on('connection', function connection(ws) {
+  ws.on('message', function incoming(data) {
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(data);
+      }
+    });
+  });
+});
 /* === Set the PORT to work with deployment environment === */
 const PORT = process.env.PORT || 3001;
 /* === Call Express as app === */
