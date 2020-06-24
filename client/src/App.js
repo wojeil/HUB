@@ -14,7 +14,7 @@ import UserPage from "./pages/UserPage";
 import AdminPage from "./pages/AdminPage";
 import PlannerPage from "./pages/PlannerPage";
 import PlannerSearchPage from "./pages/PlannerSearchPage";
-import GroupChat from "./components/Chat/GroupChat";
+import chat from "./pages/ChatPage";
 import './App.css';
 import { UserProvider } from "./utils/UserContext";
 
@@ -32,7 +32,7 @@ const AuthExample = () => (
 						<PrivateRoute exact path="/protected" component={UserPage} />
 						<PrivateRoute exact path="/planner" component={PlannerPage} />
 						<PrivateRoute exact path="/planner-search" component={PlannerSearchPage} />
-						<PrivateRoute exact path="/chat" component={GroupChat} />
+						<PrivateRoute exact path="/chat" component={chat} />
 						<AdminRoute exact path ="/admin-dash" component={AdminPage} />
 						{/* <Route component={NoMatch} /> */}
 					</Switch>

@@ -4,7 +4,7 @@ import ChatMessage from './ChatMessage'
 
 const URL = 'ws://localhost:3030'
 
-class GroupChat extends Component {
+class GroupChat extends React.Component {
   state = {
     name: 'Waldo',
     messages: [],
