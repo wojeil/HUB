@@ -56,6 +56,11 @@ function Nav() {
           </li>
           <li className="nav-item ">
             {!user.username ? "" :
+              <Link style={buttonStyle} className="nav-link" to="/chat"><span id="white">Contact</span></Link>
+            }
+          </li>
+          <li className="nav-item ">
+            {!user.username ? "" :
               <Link style={buttonStyle} className="nav-link" to="/planner-search"><span id="white">{user.username}'s TEAM</span></Link>
             }
           </li>

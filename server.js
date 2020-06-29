@@ -9,6 +9,19 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const flash = require('connect-flash');
 const routes = require('./routes/index');
+const WebSocket = require('ws');
+
+const wss = new WebSocket.Server({ port: 3030 });
+
+wss.on('connection', function connection(ws) {
+  ws.on('message', function incoming(data) {
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(data);
+      }
+    });
+  });
+});
 /* === Set the PORT to work with deployment environment === */
 const PORT = process.env.PORT || 3001;
 /* === Call Express as app === */
@@ -57,7 +70,8 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 /* === Mongoose Connection === */
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://root:root24@ds233806.mlab.com:33806/heroku_7c78v39g', { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect(process.env.MONGODB_URI || 'mongodb://root:root24@ds233806.mlab.com:33806/heroku_7c78v39g', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost/mern_authenticate_me",{ useNewUrlParser: true, useUnifiedTopology: true });
 
 /* === Error Handling === */
 
