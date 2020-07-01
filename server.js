@@ -70,8 +70,8 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 /* === Mongoose Connection === */
-//mongoose.connect(process.env.MONGODB_URI || 'mongodb://root:root24@ds233806.mlab.com:33806/heroku_7c78v39g', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect("mongodb://localhost/mern_authenticate_me",{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://root:root24@ds233806.mlab.com:33806/heroku_7c78v39g', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect("mongodb://localhost/mern_authenticate_me",{ useNewUrlParser: true, useUnifiedTopology: true });
 
 /* === Error Handling === */
 
