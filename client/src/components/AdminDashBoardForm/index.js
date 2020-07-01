@@ -19,6 +19,9 @@ function AdminDashBoardForm({loadAnnouncements}) {
             title: titleRef.current.value,
             type: typeRef.current.value,
             body: bodyRef.current.value
+        }).then(()=>{
+            titleRef.current.value = "";
+            bodyRef.current.value = "";
         })
         loadAnnouncements();
     }
